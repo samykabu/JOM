@@ -1,0 +1,118 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/d:Preliminary Studies/f:GeneralStudies.xaml" caret="2635" fromTop="8" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/d:Preliminary Studies/f:UtilitiesDesignStudies.xaml" caret="2619" fromTop="8" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/d:GeneralLocation/f:GeneralLocation.xaml" caret="2597" fromTop="14" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/d:GeneralLocation/f:MonthlyReport.xaml" caret="1942" fromTop="8" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:VideoGalary.xaml" caret="5446" fromTop="7" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:ImageGalaryPageView.xaml" caret="791" fromTop="8" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:ImageGalary.xaml" caret="789" fromTop="0" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:Design.xaml" caret="0" fromTop="0" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:Design3DView.xaml" caret="0" fromTop="0" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:NewDesignMain.xaml" caret="5660" fromTop="8" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/d:DataEntryForms/f:DataUpload.xaml.cs" caret="10534" fromTop="0" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/d:DataEntryForms/f:DataUpload.xaml" caret="6363" fromTop="10" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:Util.cs" caret="1758" fromTop="14" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:ConstructionMain.xaml.cs" caret="13525" fromTop="31" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:ConstructionDetails.xaml" caret="0" fromTop="0" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:App.xaml.cs" caret="0" fromTop="0" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:ConstructionMain.xaml" caret="0" fromTop="0" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:PreMenu.xaml" caret="0" fromTop="0" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:PreMenu.xaml.cs" caret="1235" fromTop="30" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:ConstructionDetails.xaml.cs" caret="8742" fromTop="30" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:PrespectiveDesign3DView.xaml.cs" caret="4315" fromTop="12" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:3DView.xaml.cs" caret="3798" fromTop="24" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:PrespectiveDesign3DView.xaml" caret="4926" fromTop="1" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:3DView.xaml" caret="2297" fromTop="4" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/d:Reports/f:GeneralReports.xaml" caret="0" fromTop="0" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/d:Reports/f:SubMainMenu.xaml" caret="0" fromTop="0" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/d:Reports/f:MainMenu.xaml" caret="0" fromTop="0" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:MainMenu.xaml.cs" caret="1992" fromTop="16" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/d:Reports/f:MainMenu.xaml.cs" caret="262" fromTop="13" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:MainMenu.xaml" caret="4478" fromTop="6" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:ImageGalaryPageView.xaml" caret="970" fromTop="7" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:PrespectiveDesign3DView.xaml" caret="2830" fromTop="1" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:PrespectiveDesign3DView.xaml" caret="6083" fromTop="4" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:VideoGalary.xaml" caret="1112" fromTop="1" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:VideoGalary.xaml" caret="5446" fromTop="7" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/d:GeneralLocation/f:GeneralLocation.xaml" caret="2597" fromTop="8" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/d:GeneralLocation/f:MonthlyReport.xaml" caret="1942" fromTop="8" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/d:Preliminary Studies/f:UtilitiesDesignStudies.xaml" caret="2619" fromTop="8" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/d:Preliminary Studies/f:GeneralStudies.xaml" caret="2635" fromTop="8" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/d:Reports/f:BinLadenReports.xaml" caret="2835" fromTop="8" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/d:Reports/f:GeneralReports.xaml" caret="2595" fromTop="8" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/d:Reports/f:SaudiAujReport.xaml" caret="2817" fromTop="8" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:Design3DView.xaml" caret="0" fromTop="0" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:NewDesignMain.xaml" caret="5656" fromTop="8" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/d:DataEntryForms/f:DataUpload.xaml.cs" caret="13569" fromTop="11" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:ConstructionMain.xaml.cs" caret="13914" fromTop="36" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:Util.cs" caret="2086" fromTop="24" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:Util.cs" caret="1784" fromTop="16" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:ConstructionMain.xaml.cs" caret="13319" fromTop="18" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:ConstructionMain.xaml.cs" caret="12581" fromTop="10" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:ConstructionMain.xaml.cs" caret="14083" fromTop="30" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:ConstructionMain.xaml.cs" caret="9527" fromTop="18" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:ConstructionMain.xaml.cs" caret="13012" fromTop="18" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:ConstructionMain.xaml" caret="8810" fromTop="8" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:ConstructionMain.xaml.cs" caret="13525" fromTop="31" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:App.xaml.cs" caret="1486" fromTop="15" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:3DView.xaml.cs" caret="3755" fromTop="24" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:PrespectiveDesign3DView.xaml.cs" caret="4315" fromTop="12" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:3DView.xaml" caret="2297" fromTop="4" />
+      <File id="99780359-8149-4DD3-9DFE-39A7C7739C65/f:MainMenu.xaml" caret="4482" fromTop="6" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="this" priority="0" />
+      <Item value="TitleImage" priority="0" />
+      <Item value="null" priority="0" />
+      <Item value="imgTitle" priority="4" />
+      <Item value="App" priority="3" />
+      <Item value="title" priority="3" />
+      <Item value="SynopTitle" priority="0" />
+      <Item value="SynopTitlestr" priority="0" />
+      <Item value="iTitle" priority="0" />
+      <Item value="if" priority="0" />
+      <Item value="DarkRed" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MapMenu.PreMenu">
+      <Item value="Close" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:LocalizedImage.LocImage">
+      <Item value="EnImage" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Controls.ImageButton">
+      <Item value="ToolTip" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="IndexOf" priority="0" />
+      <Item value="Replace" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@MapMenu.App">
+      <Item value="CurLanguage" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@MapMenu.App+Language">
+      <Item value="Arabic" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MapMenu.DataRecord">
+      <Item value="Title" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

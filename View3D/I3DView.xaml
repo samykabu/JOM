@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="View3D.I3DView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:View3D="clr-namespace:View3D"
+    xmlns:Controls="clr-namespace:Controls;assembly=ImageButton"
+    Width="1280" Height="720" >
+    <Grid Background="Black" ClipToBounds="True">
+        <View3D:PanAndZoomViewer  DefaultZoomFactor="1.1" x:Name="PanZoomView" Margin="0" ClipToBounds="True">
+            <Image Name="Animated3DView"   MouseDown="AnimatedImage_MouseDown" MouseUp="AnimatedImage_MouseUp" MouseMove="AnimatedImage_MouseMove" Stretch="Fill"></Image>
+        </View3D:PanAndZoomViewer>
+        <!--<Slider Canvas.Left="25" Canvas.Top="5" Height="22" Ticks="1,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2.0"  Name="slider1" Width="176" TickFrequency="0.1" Minimum="1" Maximum="2" Delay="100" TickPlacement="TopLeft" ValueChanged="slider1_ValueChanged">
+            <Slider.RenderTransform>
+                <RotateTransform Angle="90" />
+            </Slider.RenderTransform>
+        </Slider>-->
+        <Canvas>
+        <Controls:ImageButton OriginalImage="Images/Nav-DownBtn.png" MouseOverImage="Images/Nav-DownBtn-Hilit.png"  HorizontalAlignment="Left" Canvas.Left="1160.232"  Canvas.Top="88.351" MouseUp="MoveDown" Height="26.672" Width="61.679" />
+        <Controls:ImageButton OriginalImage="Images/Nav-LeftBtn.png" MouseOverImage="Images/Nav-LeftBtn-Hilit.png" HorizontalAlignment="Left" Canvas.Left="1148.563"  Canvas.Top="43.342" MouseUp="MoveLeft" Height="61.679" Width="25.005" />
+        <Controls:ImageButton OriginalImage="Images/Nav-RightBtn.png" MouseOverImage="Images/Nav-RightBtn-Hilit.png"  HorizontalAlignment="Left" Canvas.Left="1208.575" Canvas.Top="43.342" MouseUp="MoveRight" Height="61.679" Width="23.338" />
+        <Controls:ImageButton OriginalImage="Images/Nav-UpBtn.png" MouseOverImage="Images/Nav-UpBtn-Hilit.png"  HorizontalAlignment="Left" Canvas.Left="1160.232"  Canvas.Top="31.673" MouseUp="MoveUP" Height="25.005" Width="61.679" />
+        <Controls:ImageButton OriginalImage="Images/Nav-ResetBtn.png" MouseOverImage="Images/Nav-ResetBtn-Hilit.png"  HorizontalAlignment="Left" Canvas.Left="1163.566" Canvas.Top="46.676" MouseUp="ResetView" Height="55.011" Width="56.678" />
+        </Canvas>
+    </Grid>
+</UserControl>

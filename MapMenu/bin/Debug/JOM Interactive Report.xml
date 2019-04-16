@@ -1,0 +1,819 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JOM Interactive Report</name>
+    </assembly>
+    <members>
+        <member name="T:MapMenu.EntryForms.DataUpload">
+            <summary>
+            Interaction logic for DataUpload.xaml
+            </summary>
+            <summary>
+            DataUpload
+            </summary>
+        </member>
+        <member name="M:MapMenu.EntryForms.DataUpload.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MapMenu.PreMenu">
+            <summary>
+            Interaction logic for MainMenu.xaml
+            </summary>
+            <summary>
+            PreMenu
+            </summary>
+        </member>
+        <member name="M:MapMenu.PreMenu.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MapMenu.SplashWindow">
+            <summary>
+            Interaction logic for SplashWindow.xaml
+            </summary>
+            <summary>
+            SplashWindow
+            </summary>
+        </member>
+        <member name="M:MapMenu.SplashWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MapMenu.ReportsMapMenu">
+            <summary>
+            Interaction logic for MainMenu.xaml
+            </summary>
+            <summary>
+            ReportsMapMenu
+            </summary>
+        </member>
+        <member name="M:MapMenu.ReportsMapMenu.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MapMenu.App">
+            <summary>
+            Interaction logic for App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:MapMenu.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:MapMenu.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:MapMenu.Studies.GeneralStudies">
+            <summary>
+            Interaction logic for ConstructionDetails.xaml
+            </summary>
+            <summary>
+            GeneralStudies
+            </summary>
+        </member>
+        <member name="M:MapMenu.Studies.GeneralStudies.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MapMenu.GeneralLocation.MonthlyReport">
+            <summary>
+            Interaction logic for MonthlyReport.xaml
+            </summary>
+            <summary>
+            MonthlyReport
+            </summary>
+        </member>
+        <member name="M:MapMenu.GeneralLocation.MonthlyReport.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MapMenu.PrespectiveDesign3DView">
+            <summary>
+            Interaction logic for ConstructionDetails.xaml
+            </summary>
+            <summary>
+            PrespectiveDesign3DView
+            </summary>
+        </member>
+        <member name="M:MapMenu.PrespectiveDesign3DView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MapMenu.SubMainMenu">
+            <summary>
+            Interaction logic for MainMenu.xaml
+            </summary>
+            <summary>
+            SubMainMenu
+            </summary>
+        </member>
+        <member name="M:MapMenu.SubMainMenu.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MapMenu.JOMSQLDBEntities">
+            <summary>
+            There are no comments for JOMSQLDBEntities in the schema.
+            </summary>
+        </member>
+        <member name="M:MapMenu.JOMSQLDBEntities.#ctor">
+            <summary>
+            Initializes a new JOMSQLDBEntities object using the connection string found in the 'JOMSQLDBEntities' section of the application configuration file.
+            </summary>
+        </member>
+        <member name="M:MapMenu.JOMSQLDBEntities.#ctor(System.String)">
+            <summary>
+            Initialize a new JOMSQLDBEntities object.
+            </summary>
+        </member>
+        <member name="M:MapMenu.JOMSQLDBEntities.#ctor(System.Data.EntityClient.EntityConnection)">
+            <summary>
+            Initialize a new JOMSQLDBEntities object.
+            </summary>
+        </member>
+        <member name="M:MapMenu.JOMSQLDBEntities.AddToCategory(MapMenu.Category)">
+            <summary>
+            There are no comments for Category in the schema.
+            </summary>
+        </member>
+        <member name="M:MapMenu.JOMSQLDBEntities.AddToDataRecord(MapMenu.DataRecord)">
+            <summary>
+            There are no comments for DataRecord in the schema.
+            </summary>
+        </member>
+        <member name="M:MapMenu.JOMSQLDBEntities.AddToRegion(MapMenu.Region)">
+            <summary>
+            There are no comments for Region in the schema.
+            </summary>
+        </member>
+        <member name="M:MapMenu.JOMSQLDBEntities.AddToSections(MapMenu.Sections)">
+            <summary>
+            There are no comments for Sections in the schema.
+            </summary>
+        </member>
+        <member name="M:MapMenu.JOMSQLDBEntities.AddToZone(MapMenu.Zone)">
+            <summary>
+            There are no comments for Zone in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.JOMSQLDBEntities.Category">
+            <summary>
+            There are no comments for Category in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.JOMSQLDBEntities.DataRecord">
+            <summary>
+            There are no comments for DataRecord in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.JOMSQLDBEntities.Region">
+            <summary>
+            There are no comments for Region in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.JOMSQLDBEntities.Sections">
+            <summary>
+            There are no comments for Sections in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.JOMSQLDBEntities.Zone">
+            <summary>
+            There are no comments for Zone in the schema.
+            </summary>
+        </member>
+        <member name="T:MapMenu.Category">
+            <summary>
+            There are no comments for JOMSQLDBModel.Category in the schema.
+            </summary>
+            <KeyProperties>
+            CategoryID
+            </KeyProperties>
+        </member>
+        <member name="M:MapMenu.Category.CreateCategory(System.Guid,System.Int32)">
+            <summary>
+            Create a new Category object.
+            </summary>
+            <param name="categoryID">Initial value of CategoryID.</param>
+            <param name="dType">Initial value of DType.</param>
+        </member>
+        <member name="P:MapMenu.Category.CategoryID">
+            <summary>
+            There are no comments for Property CategoryID in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Category.ArName">
+            <summary>
+            There are no comments for Property ArName in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Category.EnName">
+            <summary>
+            There are no comments for Property EnName in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Category.DType">
+            <summary>
+            There are no comments for Property DType in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Category.HeaderImageFile">
+            <summary>
+            There are no comments for Property HeaderImageFile in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Category.ChildCategories">
+            <summary>
+            There are no comments for ChildCategories in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Category.ParentCategory">
+            <summary>
+            There are no comments for ParentCategory in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Category.ParentCategoryReference">
+            <summary>
+            There are no comments for ParentCategory in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Category.Sections">
+            <summary>
+            There are no comments for Sections in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Category.SectionsReference">
+            <summary>
+            There are no comments for Sections in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Category.DataRecords">
+            <summary>
+            There are no comments for DataRecords in the schema.
+            </summary>
+        </member>
+        <member name="T:MapMenu.DataRecord">
+            <summary>
+            There are no comments for JOMSQLDBModel.DataRecord in the schema.
+            </summary>
+            <KeyProperties>
+            RecordID
+            </KeyProperties>
+        </member>
+        <member name="M:MapMenu.DataRecord.CreateDataRecord(System.Guid,System.String,System.DateTime,System.Int32,System.Boolean,System.DateTime)">
+            <summary>
+            Create a new DataRecord object.
+            </summary>
+            <param name="recordID">Initial value of RecordID.</param>
+            <param name="dataFile">Initial value of DataFile.</param>
+            <param name="dataEntryDate">Initial value of DataEntryDate.</param>
+            <param name="recordDataType">Initial value of RecordDataType.</param>
+            <param name="belongToZone">Initial value of BelongToZone.</param>
+            <param name="entryDateTime">Initial value of EntryDateTime.</param>
+        </member>
+        <member name="P:MapMenu.DataRecord.RecordID">
+            <summary>
+            There are no comments for Property RecordID in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.DataRecord.Caption">
+            <summary>
+            There are no comments for Property Caption in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.DataRecord.Title">
+            <summary>
+            There are no comments for Property Title in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.DataRecord.ThumbnailFile">
+            <summary>
+            There are no comments for Property ThumbnailFile in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.DataRecord.DataFile">
+            <summary>
+            There are no comments for Property DataFile in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.DataRecord.DataEntryDate">
+            <summary>
+            There are no comments for Property DataEntryDate in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.DataRecord.RecordDataType">
+            <summary>
+            There are no comments for Property RecordDataType in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.DataRecord.BelongToZone">
+            <summary>
+            There are no comments for Property BelongToZone in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.DataRecord.ParentObjectID">
+            <summary>
+            There are no comments for Property ParentObjectID in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.DataRecord.EntryDateTime">
+            <summary>
+            There are no comments for Property EntryDateTime in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.DataRecord.Category">
+            <summary>
+            There are no comments for Category in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.DataRecord.CategoryReference">
+            <summary>
+            There are no comments for Category in the schema.
+            </summary>
+        </member>
+        <member name="T:MapMenu.Region">
+            <summary>
+            There are no comments for JOMSQLDBModel.Region in the schema.
+            </summary>
+            <KeyProperties>
+            ZoneID
+            ID
+            </KeyProperties>
+        </member>
+        <member name="M:MapMenu.Region.CreateRegion(System.String,System.String,System.Guid,System.Guid)">
+            <summary>
+            Create a new Region object.
+            </summary>
+            <param name="regionID">Initial value of RegionID.</param>
+            <param name="polyData">Initial value of PolyData.</param>
+            <param name="zoneID">Initial value of ZoneID.</param>
+            <param name="id">Initial value of ID.</param>
+        </member>
+        <member name="P:MapMenu.Region.RegionID">
+            <summary>
+            There are no comments for Property RegionID in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Region.ArName">
+            <summary>
+            There are no comments for Property ArName in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Region.EnName">
+            <summary>
+            There are no comments for Property EnName in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Region.PolyData">
+            <summary>
+            There are no comments for Property PolyData in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Region.ZoneID">
+            <summary>
+            There are no comments for Property ZoneID in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Region.ZoomFactor">
+            <summary>
+            There are no comments for Property ZoomFactor in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Region.ID">
+            <summary>
+            There are no comments for Property ID in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Region.FillColorR">
+            <summary>
+            There are no comments for Property FillColorR in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Region.FillColorG">
+            <summary>
+            There are no comments for Property FillColorG in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Region.FillColorB">
+            <summary>
+            There are no comments for Property FillColorB in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Region.TranslateX">
+            <summary>
+            There are no comments for Property TranslateX in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Region.TranslateY">
+            <summary>
+            There are no comments for Property TranslateY in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Region.Zone">
+            <summary>
+            There are no comments for Zone in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Region.ZoneReference">
+            <summary>
+            There are no comments for Zone in the schema.
+            </summary>
+        </member>
+        <member name="T:MapMenu.Sections">
+            <summary>
+            There are no comments for JOMSQLDBModel.Sections in the schema.
+            </summary>
+            <KeyProperties>
+            SectionID
+            </KeyProperties>
+        </member>
+        <member name="M:MapMenu.Sections.CreateSections(System.Guid)">
+            <summary>
+            Create a new Sections object.
+            </summary>
+            <param name="sectionID">Initial value of SectionID.</param>
+        </member>
+        <member name="P:MapMenu.Sections.SectionID">
+            <summary>
+            There are no comments for Property SectionID in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Sections.ArName">
+            <summary>
+            There are no comments for Property ArName in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Sections.EnName">
+            <summary>
+            There are no comments for Property EnName in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Sections.Category">
+            <summary>
+            There are no comments for Category in the schema.
+            </summary>
+        </member>
+        <member name="T:MapMenu.Zone">
+            <summary>
+            There are no comments for JOMSQLDBModel.Zone in the schema.
+            </summary>
+            <KeyProperties>
+            ID
+            </KeyProperties>
+        </member>
+        <member name="M:MapMenu.Zone.CreateZone(System.String,System.Guid)">
+            <summary>
+            Create a new Zone object.
+            </summary>
+            <param name="zoneID">Initial value of ZoneID.</param>
+            <param name="id">Initial value of ID.</param>
+        </member>
+        <member name="P:MapMenu.Zone.ZoneID">
+            <summary>
+            There are no comments for Property ZoneID in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Zone.ArName">
+            <summary>
+            There are no comments for Property ArName in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Zone.EnName">
+            <summary>
+            There are no comments for Property EnName in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Zone.PolyData">
+            <summary>
+            There are no comments for Property PolyData in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Zone.ZoomFactor">
+            <summary>
+            There are no comments for Property ZoomFactor in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Zone.ID">
+            <summary>
+            There are no comments for Property ID in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Zone.TranslateX">
+            <summary>
+            There are no comments for Property TranslateX in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Zone.TranslateY">
+            <summary>
+            There are no comments for Property TranslateY in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Zone.FillColorR">
+            <summary>
+            There are no comments for Property FillColorR in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Zone.FillColorG">
+            <summary>
+            There are no comments for Property FillColorG in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Zone.FillColorB">
+            <summary>
+            There are no comments for Property FillColorB in the schema.
+            </summary>
+        </member>
+        <member name="P:MapMenu.Zone.Region">
+            <summary>
+            There are no comments for Region in the schema.
+            </summary>
+        </member>
+        <member name="T:MapMenu.Design3DView">
+            <summary>
+            Interaction logic for ConstructionDetails.xaml
+            </summary>
+            <summary>
+            Design3DView
+            </summary>
+        </member>
+        <member name="M:MapMenu.Design3DView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MapMenu.ConstructionDetails">
+            <summary>
+            Interaction logic for ConstructionDetails.xaml
+            </summary>
+            <summary>
+            ConstructionDetails
+            </summary>
+        </member>
+        <member name="M:MapMenu.ConstructionDetails.#ctor">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:MapMenu.ConstructionDetails.#ctor(System.Double,System.Windows.Point,System.Boolean,System.Nullable{System.Guid},System.DateTime)">
+            <summary>
+            </summary>
+            <param name="ZoomFactor"></param>
+            <param name="Translationpoint"></param>
+            <param name="ZoneNotRegion"></param>
+            <param name="ZoneRegionID"></param>
+            <param name="CurselectedDate"></param>
+            <param name="Map"></param>
+        </member>
+        <member name="M:MapMenu.ConstructionDetails.ShowCategoryDetails(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:MapMenu.ConstructionDetails.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MapMenu.ImageGalaryPageView">
+            <summary>
+            Interaction logic for ImageGalary.xaml
+            </summary>
+            <summary>
+            ImageGalaryPageView
+            </summary>
+        </member>
+        <member name="M:MapMenu.ImageGalaryPageView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MapMenu.Studies.UtilitiesDesignStudies">
+            <summary>
+            Interaction logic for ConstructionDetails.xaml
+            </summary>
+            <summary>
+            UtilitiesDesignStudies
+            </summary>
+        </member>
+        <member name="M:MapMenu.Studies.UtilitiesDesignStudies.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MapMenu.ImageGalary">
+            <summary>
+            Interaction logic for ImageGalary.xaml
+            </summary>
+            <summary>
+            ImageGalary
+            </summary>
+        </member>
+        <member name="M:MapMenu.ImageGalary.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:JOMDB.Datamanager.DatabaseEntities">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:MapMenu.Reports.GeneralLocation">
+            <summary>
+            Interaction logic for ConstructionDetails.xaml
+            </summary>
+            <summary>
+            GeneralLocation
+            </summary>
+        </member>
+        <member name="M:MapMenu.Reports.GeneralLocation.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MapMenu.NewDesignMain">
+            <summary>
+            Interaction logic for ConstructionMain.xaml
+            </summary>
+            <summary>
+            NewDesignMain
+            </summary>
+        </member>
+        <member name="M:MapMenu.NewDesignMain.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MapMenu.Reports.GeneralReports">
+            <summary>
+            Interaction logic for ConstructionDetails.xaml
+            </summary>
+            <summary>
+            GeneralReports
+            </summary>
+        </member>
+        <member name="M:MapMenu.Reports.GeneralReports.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MapMenu.GeneralLocation.GeneralLocMainMenu">
+            <summary>
+            Interaction logic for GeneralLocMainMenu.xaml
+            </summary>
+            <summary>
+            GeneralLocMainMenu
+            </summary>
+        </member>
+        <member name="M:MapMenu.GeneralLocation.GeneralLocMainMenu.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MapMenu._3DView">
+            <summary>
+            Interaction logic for ConstructionDetails.xaml
+            </summary>
+            <summary>
+            _3DView
+            </summary>
+        </member>
+        <member name="M:MapMenu._3DView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MapMenu.VideoGalary">
+            <summary>
+            Interaction logic for VideoGalary.xaml
+            </summary>
+            <summary>
+            VideoGalary
+            </summary>
+        </member>
+        <member name="M:MapMenu.VideoGalary.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MapMenu.Reports.SaudiAuj">
+            <summary>
+            Interaction logic for ConstructionDetails.xaml
+            </summary>
+            <summary>
+            SaudiAuj
+            </summary>
+        </member>
+        <member name="M:MapMenu.Reports.SaudiAuj.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MapMenu.Reports.BinLadenReports">
+            <summary>
+            Interaction logic for ConstructionDetails.xaml
+            </summary>
+            <summary>
+            BinLadenReports
+            </summary>
+        </member>
+        <member name="M:MapMenu.Reports.BinLadenReports.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MapMenu.MainMenu">
+            <summary>
+            Interaction logic for MainMenu.xaml
+            </summary>
+            <summary>
+            MainMenu
+            </summary>
+        </member>
+        <member name="M:MapMenu.MainMenu.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MapMenu.DesignMain">
+            <summary>
+            Interaction logic for ConstructionDetails.xaml
+            </summary>
+            <summary>
+            DesignMain
+            </summary>
+        </member>
+        <member name="M:MapMenu.DesignMain.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MapMenu.ConstructionMain">
+            <summary>
+            Interaction logic for ConstructionMain.xaml
+            </summary>
+            <summary>
+            ConstructionMain
+            </summary>
+        </member>
+        <member name="M:MapMenu.ConstructionMain.#ctor">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:MapMenu.ConstructionMain.SetAnimation(System.Boolean)">
+            <summary>
+            </summary>
+            <param name="PlayIt"></param>
+        </member>
+        <member name="M:MapMenu.ConstructionMain.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

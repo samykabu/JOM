@@ -1,0 +1,28 @@
+﻿<Window x:Class="MapMenu.Reports.SaudiAuj"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="clr-namespace:Controls;assembly=ImageButton"    
+    xmlns:WpfZommPanCanvas="clr-namespace:WpfZommPanCanvas;assembly=WpfZommPanCanvas"
+    xmlns:InterActiveMap="clr-namespace:InterActiveMap;assembly=InterActiveMap"
+    xmlns:View3D="clr-namespace:View3D;assembly=View3D"
+        xmlns:L="clr-namespace:LocalizedImage;assembly=LocalizedImage"
+    Title="ConstructionDetails" Height="720" Width="1280" WindowState="Normal" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Topmost="False" >
+    <Canvas Width="1280" Height="720">
+        <Canvas>
+            <c:ImageButton OriginalImage="/BTImages/HomeBtn.png" MouseOverImage="/BTImages/HomeBtn-Hilit.png" Width="29.997" Height="30" Canvas.Left="1199.88" Canvas.Top="12" MouseUp="CloseThisWindow" />
+            <c:ImageButton OriginalImage="/BTImages/Turn-offBtn-on.png" MouseOverImage="/BTImages/Turn-offBtn-Hilit.png" Width="30" HorizontalAlignment="Left" Canvas.Left="1238" Height="30" Canvas.Top="12" MouseUp="ExitApplication"/>
+            <Image Margin="0,83,0,104" Source="/Properties\timeline-top-middelarea.png" Stretch="Fill" Height="620.133" Canvas.Top="16.867" Canvas.Left="0" Width="1280" />
+
+            <c:AnimatedWrapPanel Margin="81,91,239,0" Height="378" VerticalAlignment="Top" Grid.Column="1" Canvas.Left="504" Width="515" Canvas.Top="103" Name="wPanel">
+                </c:AnimatedWrapPanel>
+
+            <my:YearSelector Canvas.Left="0" Canvas.Top="638" Height="82" Name="ySelector" Width="704.497" xmlns:my="clr-namespace:YearSelector;assembly=YearSelector" DateChanged="ySelector_DateChanged"/>
+            <L:LocImage Margin="0,0,0,0" VerticalAlignment="Top"  AraImage="/Images/NAVSaudiOgerHeader.png" IsEnglish="{Binding Path=lng.isEnglish,Source= {x:Static Application.Current}}" Width="1280" Height="107"/>
+            <Label Canvas.Left="608" Canvas.Top="52" Height="62" Name="label1" Width="654" FontSize="26" FontFamily="simplified Arabic" FontWeight="Bold"  Foreground="White" HorizontalContentAlignment="Center" FlowDirection="RightToLeft"></Label>
+            <c:ImageButton OriginalImage="/BTImages/HomeBtn.png" MouseOverImage="/BTImages/HomeBtn-Hilit.png" Width="29.997" Height="30" Canvas.Left="1199.88" Canvas.Top="12" MouseUp="CloseThisWindow" />
+            <c:ImageButton OriginalImage="/BTImages/Turn-offBtn-on.png" MouseOverImage="/BTImages/Turn-offBtn-Hilit.png" Width="30" HorizontalAlignment="Left" Canvas.Left="1238" Height="30" Canvas.Top="12" MouseUp="ExitApplication"/>
+            <c:ImageButton OriginalImage="/BTImages/DataEntryBtn1.png" MouseOverImage="/BTImages/DataEntryBtn1-Hilit.png" Width="30" Height="30.009" Canvas.Left="585" Canvas.Top="577.316" MouseUp="ShowMetadataDialog" Visibility="Collapsed" Name="EditIcon" Panel.ZIndex="100" />
+            <Image Canvas.Left="22.864" Canvas.Top="115.749"  Height="515.869" Name="image1"  Source="/Images/SaudiOgerMap.jpg" Stretch="Uniform" Width="518.727" />
+        </Canvas>        
+    </Canvas>
+</Window>

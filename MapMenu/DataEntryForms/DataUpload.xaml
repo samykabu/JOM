@@ -1,0 +1,93 @@
+﻿<Window x:Class="MapMenu.EntryForms.DataUpload"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:EntryForms="clr-namespace:MapMenu.EntryForms"
+    Title="DataUpload" Height="719" Width="862" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" ResizeMode="NoResize" Topmost="True" Name="DataUploadW">
+    <Window.Resources>
+        <EntryForms:ImagePathConverter x:Key="LocalUriToImageConverter"/>
+    </Window.Resources>
+    <Canvas Height="684" Margin="0,0,0,0">
+        <Label Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="label1" VerticalAlignment="Top" Width="120">Metadata Catigory </Label>
+        <Label Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="label2" VerticalAlignment="Top" Width="231" Canvas.Left="0" Canvas.Top="63">Drag / Drop Files Here</Label>
+        <ComboBox Canvas.Left="138" Canvas.Top="17" Height="23" Name="comboBox1" Width="282" SelectedIndex="0" SelectionChanged="CatChanged">            
+        </ComboBox>
+        <ListBox Canvas.Left="12" Canvas.Top="104" Height="520" Name="listBox1" Width="816" AllowDrop="True" DragDrop.Drop="NewFilesDropedIn" ItemsSource="{Binding Path=Files, ElementName=DataUploadW, Mode=TwoWay}" Background="Black" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border Background="#88000000" BorderBrush="Gray" BorderThickness="2" CornerRadius="6" Margin="5,5,5,5">
+                        <StackPanel Width="256" Height="230">
+                            <Canvas Width="Auto" Height="20" Margin="0,0,0,0">
+                                <Button Click="RemoveItem" Width="20" Height="20" Canvas.Left="0">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image HorizontalAlignment="Right"   OpacityMask="#FF000000" Source="/Images/Remove.png"/>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                    <Button.ToolTip>
+                                        Click to remove the image from list
+                                    </Button.ToolTip>
+                                </Button>
+                                <Button Width="20" Height="20" Canvas.Left="25">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image HorizontalAlignment="Right"  OpacityMask="#FF000000" Visibility="{Binding HasValidTitle}" Source="/Images/Warning.png"/>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                    <Button.ToolTip>
+                                        This image has no title.
+                                    </Button.ToolTip>
+                                </Button>
+                                <Button Width="20" Height="20" Canvas.Left="50">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image HorizontalAlignment="Right"   Visibility="{Binding IsInDataBase}" Source="/Images/database.png"/>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                    <Button.ToolTip>
+                                        This file exit in the databae.
+                                    </Button.ToolTip>
+                                </Button>
+
+                            </Canvas>
+                            <Label  Background="#00FFFFFF" Foreground="White"  Content="{Binding Path=CatName}" Height="30" FontSize="14"/>
+                            <TextBox   Background="#00FFFFFF" Foreground="White"  Text="{Binding Path=Title}" Height="30" FontSize="20"/>
+                            <Image   VerticalAlignment="Top" Width="256" Height="160" Source="{Binding Path=FileName, Converter={StaticResource LocalUriToImageConverter}}" Stretch="Uniform"/>
+                            
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Width="850" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible" HorizontalAlignment="Left"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
+        <ComboBox Canvas.Left="138" Canvas.Top="46" Height="23" Name="Month" Width="75" Text="Month" SelectedIndex="0" SelectionChanged="CatChanged">
+            <ComboBoxItem>01</ComboBoxItem>
+            <ComboBoxItem>02</ComboBoxItem>
+            <ComboBoxItem>03</ComboBoxItem>
+            <ComboBoxItem>04</ComboBoxItem>
+            <ComboBoxItem>05</ComboBoxItem>
+            <ComboBoxItem>06</ComboBoxItem>
+            <ComboBoxItem>07</ComboBoxItem>            
+            <ComboBoxItem>08</ComboBoxItem>            
+            <ComboBoxItem>09</ComboBoxItem>
+            <ComboBoxItem>10</ComboBoxItem>
+            <ComboBoxItem>11</ComboBoxItem>
+            <ComboBoxItem>12</ComboBoxItem>
+        </ComboBox>
+        <ComboBox Canvas.Left="219" Canvas.Top="46" Height="23" Name="Year" Width="75" Text="Year" SelectedIndex="0" SelectionChanged="CatChanged">
+            <ComboBoxItem>2009</ComboBoxItem>
+            <ComboBoxItem>2010</ComboBoxItem>
+            <ComboBoxItem>2011</ComboBoxItem>
+            <ComboBoxItem>2012</ComboBoxItem>
+        </ComboBox>
+        <Button Canvas.Left="753" Canvas.Top="630" Height="24" Name="CancelBT" Width="75" Click="Cancel_Click">Cancel</Button>
+        <Button Canvas.Left="672" Canvas.Top="630" Height="24" Name="SaveBT" Width="76"  Click="SaveContent">Save</Button>
+        <Label Canvas.Left="12" Canvas.Top="41" Height="28" Name="label4" Width="120">Entry Date</Label>
+        <Button Canvas.Left="13" Canvas.Top="630" Height="24" Name="ClearList" Width="75" Click="ClearListBT" ToolTip="Clear All items">Clear List</Button>
+        <Label Canvas.Left="121" Canvas.Top="630" Height="28" Name="SavingInfo" Width="537" FontWeight="Bold" FontSize="12" Foreground="Black" ForceCursor="False"></Label>
+        
+    </Canvas>
+</Window>

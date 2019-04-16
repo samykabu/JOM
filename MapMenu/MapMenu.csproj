@@ -1,0 +1,924 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <DefaultClrNameSpace>MapMenu</DefaultClrNameSpace>
+    <AssemblyName>ArcView Demo</AssemblyName>
+    <RootNamespace>MapMenu</RootNamespace>
+    <AlwaysCompileMarkupFilesInSeparateDomain>false</AlwaysCompileMarkupFilesInSeparateDomain>
+    <ExpressionBlendCreationVersion>2.1.1760.0</ExpressionBlendCreationVersion>
+    <ProjectGuid>{99780359-8149-4DD3-9DFE-39A7C7739C65}</ProjectGuid>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OutputType>WinExe</OutputType>
+    <ApplicationIcon>ArcView.ico</ApplicationIcon>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>15DFECCB071238F5281D072150254A68CF4475C3</ManifestCertificateThumbprint>
+    <ManifestKeyFile>MapMenu_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>D:\JOM Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <PublisherName>N2Graphics</PublisherName>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsUrl>D:\df</BootstrapperComponentsUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\ArcView Demo.xml</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Resource Include="ArcView.ico" />
+    <Content Include="sqlceca35.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sqlcecompact35.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sqlceer35EN.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sqlceme35.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sqlceoledb35.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sqlceqp35.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sqlcese35.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Reference Include="Interop.DexterLib, Version=1.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Interop.DexterLib.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Entity.dll</HintPath>
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Data.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft SQL Server Compact Edition\v3.5\Desktop\System.Data.SqlServerCe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe.Entity, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft SQL Server Compact Edition\v3.5\System.Data.SqlServerCe.Entity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="3DView.xaml.cs">
+      <DependentUpon>3DView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralLocation\GeneralLocation.xaml.cs">
+      <DependentUpon>GeneralLocation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralLocation\GeneralLocMainMenu.xaml.cs">
+      <DependentUpon>GeneralLocMainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralLocation\MonthlyReport.xaml.cs">
+      <DependentUpon>MonthlyReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PreMenu.xaml.cs">
+      <DependentUpon>PreMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataEntryForms\DataUpload.xaml.cs">
+      <DependentUpon>DataUpload.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Datamanager.cs" />
+    <Compile Include="JOMDBEntitiesModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JOMDBEntitiesModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Preliminary Studies\UtilitiesDesignStudies.xaml.cs">
+      <DependentUpon>UtilitiesDesignStudies.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Preliminary Studies\GeneralStudies.xaml.cs">
+      <DependentUpon>GeneralStudies.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PrespectiveDesign3DView.xaml.cs">
+      <DependentUpon>PrespectiveDesign3DView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Design3DView.xaml.cs">
+      <DependentUpon>Design3DView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewDesignMain.xaml.cs">
+      <DependentUpon>NewDesignMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImageGalaryPageView.xaml.cs">
+      <DependentUpon>ImageGalaryPageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Design.xaml.cs">
+      <DependentUpon>Design.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\BinLadenReports.xaml.cs">
+      <DependentUpon>BinLadenReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SubMainMenu.xaml.cs">
+      <DependentUpon>SubMainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\GeneralReports.xaml.cs">
+      <DependentUpon>GeneralReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportsData.cs" />
+    <Compile Include="Reports\SaudiAujReport.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>SaudiAujReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SplashWindow.xaml.cs">
+      <DependentUpon>SplashWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Util.cs" />
+    <Compile Include="VideoGalary.xaml.cs">
+      <DependentUpon>VideoGalary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ConstructionMain.xaml.cs">
+      <DependentUpon>ConstructionMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConstructionDetails.xaml.cs">
+      <DependentUpon>ConstructionDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImageGalary.xaml.cs">
+      <DependentUpon>ImageGalary.xaml</DependentUpon>
+    </Compile>
+    <Page Include="3DView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralLocation\GeneralLocation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralLocation\GeneralLocMainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralLocation\MonthlyReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PreMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DataEntryForms\DataUpload.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Preliminary Studies\UtilitiesDesignStudies.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Preliminary Studies\GeneralStudies.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PrespectiveDesign3DView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design3DView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NewDesignMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImageGalaryPageView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Design.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reports\BinLadenReports.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reports\SubMainMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reports\MainMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reports\GeneralReports.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reports\SaudiAujReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SplashWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VideoGalary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ConstructionMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ConstructionDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ImageGalary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource Include="Properties\timeline-bottom.png" />
+    <Resource Include="Properties\timeline-fullmapMask.png" />
+    <Resource Include="Properties\timeline-slider.png" />
+    <Resource Include="Properties\timeline-top-middelarea.png" />
+    <Resource Include="Properties\timeline-top-smallarrow-left.png" />
+    <Resource Include="Properties\timeline-top-smallarrow-right.png" />
+    <Resource Include="Properties\timeline-top.png" />
+    <Resource Include="Properties\timeline-zonesmapMask.png" />
+    <Resource Include="Properties\timeline-zonestab.png" />
+    <Resource Include="BTImages\Turn-offBtn-off.png" />
+    <Resource Include="BTImages\Turn-offBtn-On.png" />
+    <Resource Include="BTImages\VideoBtn.png" />
+    <Resource Include="BTImages\VideoBtn-Hilit.png" />
+    <Resource Include="BTImages\3DBtn.png" />
+    <Resource Include="BTImages\3DBtn-Hilit.png" />
+    <Resource Include="BTImages\ConcoreteBtn.png" />
+    <Resource Include="BTImages\ConcoreteBtn-Hilit.png" />
+    <Resource Include="BTImages\ContractingSummeryBtn.png" />
+    <Resource Include="BTImages\ContractingSummeryBtn-Hilit.png" />
+    <Resource Include="BTImages\ContractorBtn.png" />
+    <Resource Include="BTImages\ContractorBtn-Hilit.png" />
+    <Resource Include="BTImages\DataAnlaysisBtn.png" />
+    <Resource Include="BTImages\DataAnlaysisBtn-Hilit.png" />
+    <Resource Include="BTImages\DrawingsBtn.png" />
+    <Resource Include="BTImages\DrawingsBtn-Hilit.png" />
+    <Resource Include="BTImages\HomeBtn.png" />
+    <Resource Include="BTImages\HomeBtn-Hilit.png" />
+    <Resource Include="BTImages\MnthlyProgRepBtn.png" />
+    <Resource Include="BTImages\MnthlyProgRepBtn-Hilit.png" />
+    <Resource Include="BTImages\PictureBtn.png" />
+    <Resource Include="BTImages\PictureBtn-Hilit.png" />
+    <Resource Include="BTImages\ProgressSummeryBtn.png" />
+    <Resource Include="BTImages\ProgressSummeryBtn-Hilit.png" />
+    <Resource Include="BTImages\ProjectCoordinationBtn.png" />
+    <Resource Include="BTImages\ProjectCoordinationBtn-Hilit.png" />
+    <Resource Include="BTImages\Turn-offBtn-Hilit.png" />
+    <Resource Include="BTImages\PreviousBtn.png" />
+    <Resource Include="BTImages\PreviousBtn-Hilit.png" />
+    <Resource Include="BTImages\TimelineBack-Btn.png" />
+    <Resource Include="BTImages\TimelineBack-Btn-Hilit.png" />
+    <Resource Include="BTImages\TimerIcon.png" />
+    <Resource Include="BTImages\ForwardBtn.png" />
+    <Resource Include="BTImages\ForwardBtn-Hilit.png" />
+    <Resource Include="BTImages\MaxmizeBtn.png" />
+    <Resource Include="BTImages\MaxmizeBtn-Hilit.png" />
+    <Resource Include="BTImages\NextBtn.png" />
+    <Resource Include="BTImages\NextBtn-Hilit.png" />
+    <Resource Include="BTImages\PlayBtn.png" />
+    <Resource Include="BTImages\PlayBtn-Hilit.png" />
+    <Resource Include="BTImages\BackwardBtn-Hilit.png" />
+    <Resource Include="BTImages\BackwardBtn.png" />
+    <Resource Include="BTImages\RightArrowBtn.png" />
+    <Resource Include="BTImages\LeftArrowBtn.png" />
+    <Resource Include="BTImages\MapDetailsBtn-Hilit.png" />
+    <Resource Include="BTImages\DataEntryBtn-Hilit.png" />
+    <Resource Include="BTImages\DataEntryBtn.png" />
+    <Resource Include="BTImages\DeleteBtn-Hilit.png" />
+    <Resource Include="BTImages\DeleteBtn.png" />
+    <Resource Include="BTImages\StopBtn-Hilit.png" />
+    <Resource Include="BTImages\StopBtn.png" />
+    <Content Include="GlobeIntro3.wmv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\GlobeIntro200.png" />
+    <Resource Include="Images\SynobisisWindow.png" />
+    <Resource Include="Videos\DrawingsBtn-Hilit.png" />
+    <Resource Include="Videos\DrawingsBtn.png" />
+    <Resource Include="Videos\DocApprovalBtn-Hilit.png" />
+    <Resource Include="Videos\DocApprovalBtn.png" />
+    <Resource Include="Videos\DataAnlaysisBtn-Hilit.png" />
+    <Resource Include="Videos\DataAnlaysisBtn.png" />
+    <Resource Include="Videos\ProgressSummeryBtn-Hilit.png" />
+    <Resource Include="Videos\ProgressSummeryBtn.png" />
+    <Resource Include="Images\SouthDis.jpg" />
+    <Resource Include="Images\NorthDis.jpg" />
+    <Resource Include="Images\South.jpg" />
+    <Resource Include="Images\North.jpg" />
+    <Resource Include="Images\OverlayFooter.png" />
+    <Resource Include="Images\ContentHeader-VideoLib.png" />
+    <Resource Include="Images\controller-bak.png" />
+    <Resource Include="Images\SliderIcon.png" />
+    <Resource Include="Images\RightArrowBtn.png" />
+    <Resource Include="Images\PlaybackScreen.png" />
+    <Resource Include="Images\LeftArrowBtn.png" />
+    <Resource Include="Images\JabalOmarLogo.png" />
+    <Resource Include="Images\Contentbody.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LocalizedImageButton\LocalizedImageButton.csproj">
+      <Project>{54572879-3BA2-4A35-83BF-FAD0E15C00CB}</Project>
+      <Name>LocalizedImageButton</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LocalizedImage\LocalizedImage.csproj">
+      <Project>{87D29719-1807-4BD5-9921-0C0A55B04728}</Project>
+      <Name>LocalizedImage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\View3D\View3D.csproj">
+      <Project>{63372EE6-38CC-49D6-8239-19B756F6D02C}</Project>
+      <Name>View3D</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FluidKit\FluidKit.csproj">
+      <Project>{75541544-BF77-4FDC-B03B-BC0DBEBFB8F5}</Project>
+      <Name>FluidKit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ImageButton\ImageButton.csproj">
+      <Project>{E5FE2B4E-DF29-45CF-A105-8EF4BB2ACB66}</Project>
+      <Name>ImageButton</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InterActiveMap\InterActiveMap.csproj">
+      <Project>{55024A60-6417-4FF0-9423-C9F6735E95CE}</Project>
+      <Name>InterActiveMap</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WpfZommPanCanvas\WpfZommPanCanvas.csproj">
+      <Project>{64DBCACB-66C0-461F-83D7-3FCB9A145E98}</Project>
+      <Name>WpfZommPanCanvas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YearSelector\YearSelector.csproj">
+      <Project>{64AA042F-AB80-4997-ABAC-332DB2EB8C1A}</Project>
+      <Name>YearSelector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZonesList\ZonesList.csproj">
+      <Project>{7EC28FD9-A94E-4FBB-8FF9-9F2C32774DD2}</Project>
+      <Name>ZonesList</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\main-menu-bg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\textunderline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Turn-offBtn-Hilit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Turn-offBtn-off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Turn-offBtn-On.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\construction-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\construction-icon_hilit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\construction-text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\design-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\3DScreen.png" />
+    <Resource Include="Images\3DStatusTab-RealBtn-Hilit.png" />
+    <Resource Include="Images\3DStatusTab-RealBtn.png" />
+    <Resource Include="Images\3DStatusTab-VirtualBtn-Hilit.png" />
+    <Resource Include="Images\3DStatusTab-VirtualBtn.png" />
+    <Resource Include="Images\3DVideoBtn-Hilit.png" />
+    <Resource Include="Images\3DVideoBtn.png" />
+    <Resource Include="Images\3DViewBtn-Hilit.png" />
+    <Resource Include="Images\3DViewBtn.png" />
+    <Resource Include="Images\ContentHeader-PhotoLib.png" />
+    <Resource Include="Images\ContentHeader-Chrats.png" />
+    <Resource Include="Images\ContentHeader-concorete.png" />
+    <Resource Include="Images\ContentHeader-ContractorsPerformance.png" />
+    <Resource Include="Images\ContentHeader-Dataanlyst.png" />
+    <Resource Include="Images\ContentHeader-PorjectCoordination.png" />
+    <Resource Include="Images\ContentHeader-ProjectDocs.png" />
+    <Resource Include="Images\ContentHeader-Specialcontracts.png" />
+    <Resource Include="Images\ContentHeader-WorkProgress.png" />
+    <Resource Include="Images\ContentHeader-WorkProgressSummary.png" />
+    <Resource Include="Images\ContractorPerformanceBtn-Hilit.png" />
+    <Resource Include="Images\ContractorPerformanceBtn.png" />
+    <Resource Include="Images\ContractsDocsBtn-Hilit.png" />
+    <Resource Include="Images\ContractsDocsBtnoff.png" />
+    <Resource Include="Images\BinLadenMap.jpg" />
+    <Resource Include="Images\ActualWorkValuesBtn-Hilit.png" />
+    <Resource Include="Images\ActualWorkValuesBtn.png" />
+    <Resource Include="Images\ConcoreteBtn-Hilit.png" />
+    <Resource Include="Images\ConcoreteBtn.png" />
+    <Resource Include="Images\ContentHeader-ActualWorkValue.png" />
+    <Resource Include="Images\ContentHeader-DetailedStatement.png" />
+    <Resource Include="Images\ContentHeader-LocationStatusProgress.png" />
+    <Resource Include="Images\ContentHeader-Timeline.png" />
+    <Resource Include="Images\ContentHeader-TotalDisbursements.png" />
+    <Resource Include="Images\ContentHeader-Contracts&amp;Docs.png" />
+    <Resource Include="Images\ContentHeader-ProjetctObstecls.png" />
+    <Resource Include="Images\ContentHeader-WorkProgressSum.png" />
+    <Resource Include="Images\3DView-Header.png" />
+    <Resource Include="Images\3DStatusTab-RealBtn-HilitEN.png" />
+    <Resource Include="Images\3DStatusTab-RealBtnEN.png" />
+    <Resource Include="Images\3DStatusTab-VirtualBtn-HilitEN.png" />
+    <Resource Include="Images\3DStatusTab-VirtualBtnEN.png" />
+    <Resource Include="BTImages\DataEntryBtn1.png" />
+    <Resource Include="BTImages\Yuuminco Icon 14.png" />
+    <Resource Include="BTImages\ZoominBtn.png" />
+    <Resource Include="BTImages\ZoomoutBtn.png" />
+    <Resource Include="BTImages\ZoominBtn-Hilit.png" />
+    <Resource Include="BTImages\ZoomoutBtn-Hilit.png" />
+    <Resource Include="BTImages\DataEntryBtn1-Hilit.png" />
+    <Resource Include="BTImages\MapDetailsBtn.png" />
+    <Content Include="Images\3DView.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\Contentarea-3D-Prespective.png" />
+    <Resource Include="Images\Contentarea-Abnia-Followups.png" />
+    <Resource Include="Images\Contentarea-Challenges.png" />
+    <Resource Include="Images\Contentarea-Consultant-Evaluation.png" />
+    <Resource Include="Images\Contentarea-Contract-Status.png" />
+    <Resource Include="Images\Contentarea-Contractor-Preformance.png" />
+    <Resource Include="Images\Contentarea-Design-Approval-Status.png" />
+    <Resource Include="Images\Contentarea-Electrical-Power-Supply.png" />
+    <Resource Include="Images\Contentarea-Interim-Payment-Status.png" />
+    <Resource Include="Images\Contentarea-Internal-Finishing.png" />
+    <Resource Include="Images\Contentarea-Labors-and-equipment-on-site.png" />
+    <Resource Include="Images\Contentarea-Master-Plan.png" />
+    <Resource Include="Images\Contentarea-Monthly-Executed-Works-Report.png" />
+    <Resource Include="Images\Contentarea-Preliminary-Design.png" />
+    <Resource Include="Images\Contentarea-Site-Progress-Report.png" />
+    <Resource Include="Images\Contentarea-Storm-Water-Network.png" />
+    <Resource Include="Images\Contentarea-Technical-Galleries.png" />
+    <Resource Include="Images\Contentarea-Time-Schedule.png" />
+    <Resource Include="Images\Contentarea-Video-Graphic.png" />
+    <Resource Include="Images\Contentarea-Virtual-3D-Animation.png" />
+    <Resource Include="Images\Contentarea-Virtual-3D.png" />
+    <Resource Include="Images\Contentarea-Waste-&amp;-Grey-Water-Network.png" />
+    <Resource Include="Images\Contentarea-Water-Supply-Network.png" />
+    <Resource Include="Images\Contentarea-WP-in-terms-of-total-contract.png" />
+    <Resource Include="Images\ContentHeader-Allocation-of-Public-&amp;-Private-Areas.png" />
+    <Resource Include="Images\ContentHeader-General-Project-Prespective.png" />
+    <Resource Include="Images\ContentHeader-Jabal-Omar-Perimeter-Coordinates.png" />
+    <Resource Include="Images\ContentHeader-Land-Use-Master-Plan-Parcellization.png" />
+    <Resource Include="Images\ContentHeader-Pedestrian-Diagram-Flow.png" />
+    <Resource Include="Images\ContentHeader-Project-Location.png" />
+    <Resource Include="Images\ContentHeader-Roads-Layout-Levels-&amp;-Slopes.png" />
+    <Resource Include="Images\ContentHeader-Site-Contours-Brfore-Excavation.png" />
+    <Resource Include="Images\ContentHeader-Site-Land-Use-Brief.png" />
+    <Resource Include="Images\ContentHeader-Trafic-Diagram-High-Season.png" />
+    <Resource Include="Images\ContentHeader-Trafic-Diagram-off-Season.png" />
+    <Resource Include="Images\ContentHeader-Urban-Design-Brief.png" />
+    <Resource Include="Images\Cotractors-Reports-Hilit.png" />
+    <Resource Include="Images\Cotractors-Reports.png" />
+    <Resource Include="Images\ArabicBtn-hilit.jpg" />
+    <Resource Include="Images\ArabicBtn.jpg" />
+    <Resource Include="Images\ArabicBtn-Hilit.png" />
+    <Resource Include="Images\ArabicBtn.png" />
+    <Resource Include="Images\Contentarea-3D-PrespectiveEN.png" />
+    <Resource Include="Images\Contentarea-Abnia-FollowupsEN.png" />
+    <Resource Include="Images\Contentarea-ChallengesEN.png" />
+    <Resource Include="Images\Contentarea-Consultant-EvaluationEN.png" />
+    <Resource Include="Images\Contentarea-Contract-StatusEN.png" />
+    <Resource Include="Images\Contentarea-Contractor-PreformanceEN.png" />
+    <Resource Include="Images\Contentarea-Design-Approval-StatusEN.png" />
+    <Resource Include="Images\Contentarea-Electrical-Power-SupplyEN.png" />
+    <Resource Include="Images\Contentarea-Interim-Payment-StatusEN.png" />
+    <Resource Include="Images\Contentarea-Internal-FinishingEN.png" />
+    <Resource Include="Images\Contentarea-Labors-and-equipment-on-siteEN.png" />
+    <Resource Include="Images\Contentarea-Master-PlanEN.png" />
+    <Resource Include="Images\Contentarea-Monthly-Executed-Works-ReportEN.png" />
+    <Resource Include="Images\Contentarea-Preliminary-DesignEN.png" />
+    <Resource Include="Images\Contentarea-Site-Progress-ReportEN.png" />
+    <Resource Include="Images\Contentarea-Storm-Water-NetworkEN.png" />
+    <Resource Include="Images\Contentarea-Technical-GalleriesEN.png" />
+    <Resource Include="Images\Contentarea-Time-ScheduleEN.png" />
+    <Resource Include="Images\Contentarea-Video-GraphicEN.png" />
+    <Resource Include="Images\Contentarea-Virtual-3D-AnimationEN.png" />
+    <Resource Include="Images\Contentarea-Virtual-3DEN.png" />
+    <Resource Include="Images\Contentarea-Waste-&amp;-Grey-Water-NetworkEN.png" />
+    <Resource Include="Images\Contentarea-Water-Supply-NetworkEN.png" />
+    <Resource Include="Images\Contentarea-WP-in-terms-of-total-contractEN.png" />
+    <Resource Include="Images\ContentHeader-Allocation-of-Public-&amp;-Private-AreasEN.png" />
+    <Resource Include="Images\ContentHeader-General-Project-PrespectiveEN.png" />
+    <Resource Include="Images\ContentHeader-Jabal-Omar-Perimeter-CoordinatesEN.png" />
+    <Resource Include="Images\ContentHeader-Land-Use-Master-Plan-ParcellizationEN.png" />
+    <Resource Include="Images\ContentHeader-Pedestrian-Diagram-FlowEN.png" />
+    <Resource Include="Images\ContentHeader-PhotoLibEN.png" />
+    <Resource Include="Images\ContentHeader-Project-LocationEN.png" />
+    <Resource Include="Images\ContentHeader-Roads-Layout-Levels-&amp;-SlopesEN.png" />
+    <Resource Include="Images\ContentHeader-Site-Contours-Brfore-ExcavationEN.png" />
+    <Resource Include="Images\ContentHeader-Site-Land-Use-BriefEN.png" />
+    <Resource Include="Images\ContentHeader-TimelineEN.png" />
+    <Resource Include="Images\ContentHeader-Trafic-Diagram-High-SeasonEN.png" />
+    <Resource Include="Images\ContentHeader-Trafic-Diagram-off-SeasonEN.png" />
+    <Resource Include="Images\ContentHeader-Urban-Design-BriefEN.png" />
+    <Resource Include="Images\ContentHeader-VideoLibEN.png" />
+    <Resource Include="Images\Cotractors-Reports-HilitEN.png" />
+    <Resource Include="Images\Cotractors-ReportsEN.png" />
+    <Resource Include="Images\ContractorsRepBtn-HilitEN.png" />
+    <Resource Include="Images\ContractorsRepBtnEN.png" />
+    <Resource Include="Images\database.png" />
+    <Content Include="Images\design-icon_hilit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\DetailedStatementBtn-Hilit.png" />
+    <Resource Include="Images\DetailedStatementBtn.png" />
+    <Resource Include="Images\DocApprovalBtn-Hilit.png" />
+    <Resource Include="Images\DocApprovalBtn.png" />
+    <Resource Include="Images\InteriorDesign-BTN.png" />
+    <Resource Include="Images\InteriorDesign-BTN_Hilit.png" />
+    <Resource Include="Images\ElevationHeader.png" />
+    <Resource Include="Images\InteriorDesignHeader.png" />
+    <Resource Include="Images\ElevationsBtn-Hilit.png" />
+    <Resource Include="Images\ElevationsBtn.png" />
+    <Resource Include="Images\InteriorDesignsBtn-Hilit.png" />
+    <Resource Include="Images\InteriorDesignsBtn.png" />
+    <Resource Include="Images\InitialDesignBtn-Hilit.png" />
+    <Resource Include="Images\InitialDesignBtn.png" />
+    <Resource Include="Images\InitialDesignHeader.png" />
+    <Resource Include="Images\General-Studies-Hilit.png" />
+    <Resource Include="Images\General-Studies.png" />
+    <Resource Include="Images\EnglishBtn-hilit.jpg" />
+    <Resource Include="Images\EnglishBtn.jpg" />
+    <Resource Include="Images\EnglishBtn.png" />
+    <Resource Include="Images\EnglishBtn-Hilit.png" />
+    <Resource Include="Images\ElevationHeaderEN.png" />
+    <Resource Include="Images\InteriorDesignHeaderEN.png" />
+    <Resource Include="Images\General-Studies-HilitEN.png" />
+    <Resource Include="Images\General-StudiesEN.png" />
+    <Content Include="Images\JOWIP-Editor.ico" />
+    <Content Include="Images\JOWIP-Presenter.ico" />
+    <Resource Include="Images\NAVBinladengroupHeader.png" />
+    <Resource Include="Images\NAVGeneralRepHeader.png" />
+    <Resource Include="Images\NAVSaudiOgerHeader.png" />
+    <Resource Include="Images\LocationProgressStatusBtn-Hilit.png" />
+    <Resource Include="Images\LocationProgressStatusBtn.png" />
+    <Resource Include="Images\MnthlyProgRepBtn-Hilit.png" />
+    <Resource Include="Images\ProgressSummeryBtn-Hilit.png" />
+    <Resource Include="Images\ProgressSummeryBtn.png" />
+    <Resource Include="Images\TimelineBtn-Hilit.png" />
+    <Resource Include="Images\TimelineBtn.png" />
+    <Resource Include="Images\TotalDisbursementsBtn-Hilit.png" />
+    <Resource Include="Images\TotalDisbursementsBtn.png" />
+    <Resource Include="Images\MnthlyProgRepBtn.png" />
+    <Resource Include="Images\NAV3DVIEW_HEADER.png" />
+    <Resource Include="Images\PlanViewHeader.png" />
+    <Resource Include="Images\PrespectivesHeader.png" />
+    <Resource Include="Images\SectionsHeader.png" />
+    <Resource Include="Images\PrespectivesBtn-Hilit.png" />
+    <Resource Include="Images\PrespectivesBtn.png" />
+    <Resource Include="Images\Remove.png" />
+    <Resource Include="Images\Warning2.png" />
+    <Resource Include="Images\Stop.png" />
+    <Resource Include="Images\Up.png" />
+    <Resource Include="Images\Warning.png" />
+    <Resource Include="Images\main-menu-BG-footer.png" />
+    <Resource Include="Images\Main3dPrespectiveBtn-Hilit.png" />
+    <Resource Include="Images\Main3dPrespectiveBtn.png" />
+    <Resource Include="Images\MainMasterPlanBtn-Hilit.png" />
+    <Resource Include="Images\MainMasterPlanBtn.png" />
+    <Resource Include="Images\MainPreStudiesBtn-Hilit.png" />
+    <Resource Include="Images\MainPreStudiesBtn.png" />
+    <Resource Include="Images\Utilities-Design-Brief-Hilit.png" />
+    <Resource Include="Images\Utilities-Design-Brief.png" />
+    <Resource Include="Images\timeline-top-MasterPlan.png" />
+    <Resource Include="Images\timeline-top-PreliminaryStudies.png" />
+    <Resource Include="Images\timeline-top-Preliminary-Studies.png" />
+    <Resource Include="Images\timeline-top-Utilities-Design-Brief.png" />
+    <Resource Include="Images\PlanViewHeaderEN.png" />
+    <Resource Include="Images\PrespectivesHeaderEN.png" />
+    <Resource Include="Images\SectionsHeaderEN.png" />
+    <Resource Include="Images\timeline-top-Preliminary-StudiesEN.png" />
+    <Resource Include="Images\timeline-top-Utilities-Design-BriefEN.png" />
+    <Resource Include="Images\main-menu-BG-footerEN.png" />
+    <Resource Include="Images\main-menu-BGEN.png" />
+    <Resource Include="Images\Main3dPrespectiveBtn-HilitEN.png" />
+    <Resource Include="Images\Main3dPrespectiveBtnEN.png" />
+    <Resource Include="Images\MainConstructionsBtn-HilitEN.png" />
+    <Resource Include="Images\MainConstructionsBtnEN.png" />
+    <Resource Include="Images\MainDesignBtn-HilitEN.png" />
+    <Resource Include="Images\MainDesignBtnEN.png" />
+    <Resource Include="Images\MainMasterPlanBtn-HilitEN.png" />
+    <Resource Include="Images\MainMasterPlanBtnEN.png" />
+    <Resource Include="Images\MainMonthlyRepBtn-HilitEN.png" />
+    <Resource Include="Images\MainMonthlyRepBtnEN.png" />
+    <Resource Include="Images\MainPreStudiesBtn-HilitEN.png" />
+    <Resource Include="Images\MainPreStudiesBtnEN.png" />
+    <Resource Include="Images\Utilities-Design-Brief-HilitEN.png" />
+    <Resource Include="Images\Utilities-Design-BriefEN.png" />
+    <Resource Include="Images\SubBinladenRepBtn-HilitEN.png" />
+    <Resource Include="Images\SubBinladenRepBtnEN.png" />
+    <Resource Include="Images\SubGeneralRepBtn-HilitEN.png" />
+    <Resource Include="Images\SubGeneralRepBtnEN.png" />
+    <Resource Include="Images\SubSaudiOgerRepBtn-HilitEN.png" />
+    <Resource Include="Images\SubSaudiOgerRepBtnEN.png" />
+    <Resource Include="Images\NAV3DVIEW_HEADEREN.png" />
+    <Resource Include="Images\NAVBinladengroupHeaderEN.png" />
+    <Resource Include="Images\NAVGeneralRepHeaderEN.png" />
+    <Resource Include="Images\NAVSaudiOgerHeaderEN.png" />
+    <Resource Include="Images\timeline-top-3dPrespectiveEN.png" />
+    <Resource Include="Images\timeline-top-ConstructionsEN.png" />
+    <Resource Include="Images\timeline-top-DesignEN.png" />
+    <Resource Include="Images\timeline-top-MasterPlanEN.png" />
+    <Resource Include="Images\timeline-top-MonthlyReportsEN.png" />
+    <Resource Include="Images\timeline-top-PrespectiveEN.png.png" />
+    <Resource Include="Images\MasterPlanSubMenu-MasterPlan.png" />
+    <Resource Include="Images\MasterPlanSubMenu-MasterPlanEN.png" />
+    <Resource Include="Images\MasterPlanSubMenu-MasterPlanHilit.png" />
+    <Resource Include="Images\MasterPlanSubMenu-MasterPlanHilitEN.png" />
+    <Resource Include="Images\MasterPlanSubMenu-MonthlyRep.png" />
+    <Resource Include="Images\MasterPlanSubMenu-MonthlyRepEN.png" />
+    <Resource Include="Images\MasterPlanSubMenu-MonthlyRepHilit.png" />
+    <Resource Include="Images\MasterPlanSubMenu-MonthlyRepHilitEN.png" />
+    <Resource Include="Images\leaflet-icon-General-Reports.png" />
+    <Resource Include="Images\leaflet-icon-MasterPlan.png" />
+    <Resource Include="Images\leaflet-icon-Monthly-Reports.png" />
+    <Resource Include="Images\leaflet-icon-Preliminary-Studies.png" />
+    <Resource Include="Images\leaflet-icon-Utilities-Design-Brief.png" />
+    <Resource Include="Images\timeline-top-General-Reports.png" />
+    <Resource Include="Images\timeline-top-General-ReportsEN.png" />
+    <Resource Include="Images\timeline-top-Monthly-ReportsEN.png" />
+    <Resource Include="Images\timeline-top-MonthlyReports.png" />
+    <Resource Include="Images\timeline-top-middelarea.png" />
+    <Resource Include="Images\timeline-top-Monthly-Work-Progress.png" />
+    <Resource Include="Images\timeline-top-Monthly-Work-ProgressEN.png" />
+    <Resource Include="Images\3DView_Seq.png" />
+    <None Include="JOM\JOMSQLDB.sdf" />
+    <Content Include="JOWIP-Editor.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JOWIP-Presenter.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="SplashScreen.png" />
+    <None Include="JOM\DesignDB.xml" />
+    <None Include="JOM\SortedData.xml" />
+    <Resource Include="Images\SaudiOgerMap.jpg" />
+    <Resource Include="Images\ProjetctObsteclsBtn-Hilit.png" />
+    <Resource Include="Images\ProjetctObsteclsBtn.png" />
+    <Resource Include="Images\SpecialContractingSummeryBtn-Hilit.png" />
+    <Resource Include="Images\SpecialContractingSummeryBtn.png" />
+    <Resource Include="Images\WorkProgressSumBtn-Hilit.png" />
+    <Resource Include="Images\WorkProgressSumBtn.png" />
+    <Resource Include="Images\MainConstructionsBtn-Hilit.png" />
+    <Resource Include="Images\MainConstructionsBtn.png" />
+    <Resource Include="Images\MainMonthlyRepBtn-Hilit.png" />
+    <Resource Include="Images\MainMonthlyRepBtn.png" />
+    <Resource Include="Images\SubBinladenRepBtn-Hilit.png" />
+    <Resource Include="Images\SubBinladenRepBtn.png" />
+    <Resource Include="Images\SubGeneralRepBtn-Hilit.png" />
+    <Resource Include="Images\SubGeneralRepBtn.png" />
+    <Resource Include="Images\SubSaudiOgerRepBtn-Hilit.png" />
+    <Resource Include="Images\SubSaudiOgerRepBtn.png" />
+    <Resource Include="Images\Header-3dvideo.png" />
+    <Resource Include="Images\Header-3dview.png" />
+    <Resource Include="Images\Header-elevation.png" />
+    <Resource Include="Images\Header-PlanView.png" />
+    <Resource Include="Images\Header-Prespective.png" />
+    <Resource Include="Images\Header-sections.png" />
+    <Resource Include="Images\timeline-top-Constructions.png" />
+    <Resource Include="Images\timeline-top-Design.png" />
+    <Resource Include="Images\timeline-top-Prespective.png" />
+    <Resource Include="Images\ImageIcon-Hilit.png" />
+    <Resource Include="Images\ImageIcon.png" />
+    <Resource Include="Images\VideoIcon-Hilit.png" />
+    <Resource Include="Images\VideoIcon.png" />
+    <Resource Include="Images\SynoposisScreen.png" />
+    <Resource Include="Images\Nav-DownBtn-Hilit.png" />
+    <Resource Include="Images\Nav-DownBtn.png" />
+    <Resource Include="Images\Nav-LeftBtn-Hilit.png" />
+    <Resource Include="Images\Nav-LeftBtn.png" />
+    <Resource Include="Images\Nav-ResetBtn-Hilit.png" />
+    <Resource Include="Images\Nav-ResetBtn.png" />
+    <Resource Include="Images\Nav-RightBtn-Hilit.png" />
+    <Resource Include="Images\Nav-RightBtn.png" />
+    <Resource Include="Images\Nav-UpBtn-Hilit.png" />
+    <Resource Include="Images\Nav-UpBtn.png" />
+    <Resource Include="Images\MainConstructionBtn-Hilit.png" />
+    <Resource Include="Images\MainConstructionBtn.png" />
+    <Resource Include="Images\MainDesignBtn-Hilit.png" />
+    <Resource Include="Images\MainDesignBtn.png" />
+    <Resource Include="Images\MainPrespectiveBtn-Hilit.png" />
+    <Resource Include="Images\MainPrespectiveBtn.png" />
+    <Resource Include="Images\ElevationViewBtn-Hilit.png" />
+    <Resource Include="Images\ElevationViewBtn.png" />
+    <Resource Include="Images\PlanViewBtn-Hilit.png" />
+    <Resource Include="Images\PlanViewBtn.png" />
+    <Resource Include="Images\PrespectiveBtn-Hilit.png" />
+    <Resource Include="Images\PrespectiveBtn.png" />
+    <Resource Include="Images\SectionsBtn-Hilit.png" />
+    <Resource Include="Images\SectionsBtn.png" />
+    <Resource Include="Images\Loading2.gif" />
+    <Resource Include="zonesDesign.jpg" />
+    <Resource Include="zones-2008-12-29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\design-text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="MapMenu_TemporaryKey.pfx" />
+    <EntityDeploy Include="JOMDBEntitiesModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>JOMDBEntitiesModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

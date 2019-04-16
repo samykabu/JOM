@@ -1,0 +1,101 @@
+﻿<UserControl x:Class="DataEntryList.DragDropEntry"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Controls="clr-namespace:Thriple.Controls;assembly=Thriple"
+    Height="300" Width="300">
+    <UserControl.Resources>
+        <DataTemplate x:Key="ListItemTemplate">
+            <Border Background="#88000000" BorderBrush="Gray" BorderThickness="2" CornerRadius="6" >
+                <StackPanel Width="200" Height="200">
+                    <DockPanel Width="200" Height="14" FlowDirection="LeftToRight" >
+                        <Button Click="RemoveItem">
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Image HorizontalAlignment="Right"  Width="14" Height="14" OpacityMask="#FF000000" Source="/Images/Remove.png"/>
+                                </ControlTemplate>
+                            </Button.Template>
+                            <Button.ToolTip>
+                                Click to remove the image from list
+                            </Button.ToolTip>
+                        </Button>
+                        <Button Click="RemoveItem">
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Image HorizontalAlignment="Right"  Width="14" Height="14" OpacityMask="#FF000000" Visibility="{Binding HasValidTitle}" Source="/Images/Warning.png"/>
+                                </ControlTemplate>
+                            </Button.Template>
+                            <Button.ToolTip>
+                                This image has no title.
+                            </Button.ToolTip>
+                        </Button>
+                        <Button  Command="Controls:ContentControl3D.RotateCommand">
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Image HorizontalAlignment="Right"  Width="14" Height="14"  OpacityMask="#FF000000" Source="/Images/Up.png"/>
+                                </ControlTemplate>
+                            </Button.Template>
+                            <Button.ToolTip>
+                                Details
+                            </Button.ToolTip>
+                        </Button>
+
+                    </DockPanel>
+                    <TextBox   Background="#00FFFFFF" Foreground="White"  Text="{Binding Path=Title}"/>
+                    <Image   VerticalAlignment="Top" Width="200" Height="200" Source="{Binding Path=FileName}"/>
+                </StackPanel>
+            </Border>
+        </DataTemplate>
+        <DataTemplate x:Key="ListItemTemplatet">
+            <Border Background="#88000000" BorderBrush="Gray" BorderThickness="2" CornerRadius="6" >
+                <DockPanel Width="500" Height="200">
+                    <Button  Command="Controls:ContentControl3D.RotateCommand">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Image HorizontalAlignment="Right"  Width="28" OpacityMask="#FF000000" Source="/Images/Up.png"/>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Image   VerticalAlignment="Top" Width="200" Height="200" Source="{Binding Path=FileName}"/>
+                    <Label   Background="#00FFFFFF" Foreground="White"  Content="{Binding Path=Title}"/>
+                </DockPanel>
+            </Border>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid Width="820" SnapsToDevicePixels="False" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto">
+            </RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0" Background="Black" Width="Auto" Height="Auto">
+            <Label Background="Black" Width="700" Height="Auto" Foreground="White" x:Name="lbCategoryName" FontSize="40">This Category 1</Label>
+            <Button Width="50">OK</Button>
+            <Button Width="50">Cancel</Button>
+        </DockPanel>
+        <ListBox x:Name="SelectedFilesList" Grid.Row="1" Height="Auto" Width="Auto" AllowDrop="True" DragDrop.Drop="NewFilesDropedIn" ItemsSource="{Binding Path=Files, ElementName=window, Mode=TwoWay}" Background="Black" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="{x:Type ListBoxItem}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                <Controls:ContentControl3D 
+                BackContent="{Binding}"
+                BackContentTemplate="{StaticResource ListItemTemplatet}"
+                Content="{Binding}"
+                ContentTemplate="{StaticResource ListItemTemplate}"
+                RotationDirection="TopToBottom"
+                Width="400" Height="400"
+                />
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Width="800" ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
+    </Grid>
+</UserControl>

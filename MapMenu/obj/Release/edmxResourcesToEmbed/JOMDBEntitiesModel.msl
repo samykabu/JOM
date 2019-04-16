@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+  <EntityContainerMapping StorageEntityContainer="JOMSQLDBModelStoreContainer" CdmEntityContainer="JOMSQLDBEntities">
+    <EntitySetMapping Name="Category">
+      <EntityTypeMapping TypeName="IsTypeOf(JOMSQLDBModel.Category)">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="HeaderImageFile" ColumnName="HeaderImageFile" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="ArName" ColumnName="ArName" />
+          <ScalarProperty Name="EnName" ColumnName="EnName" />
+          <ScalarProperty Name="DType" ColumnName="DType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataRecord">
+      <EntityTypeMapping TypeName="IsTypeOf(JOMSQLDBModel.DataRecord)">
+        <MappingFragment StoreEntitySet="DataRecord">
+          <ScalarProperty Name="EntryDateTime" ColumnName="EntryDateTime" />
+          <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+          <ScalarProperty Name="Caption" ColumnName="Caption" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ThumbnailFile" ColumnName="ThumbnailFile" />
+          <ScalarProperty Name="DataFile" ColumnName="DataFile" />
+          <ScalarProperty Name="DataEntryDate" ColumnName="DataEntryDate" />
+          <ScalarProperty Name="RecordDataType" ColumnName="RecordDataType" />
+          <ScalarProperty Name="BelongToZone" ColumnName="BelongToZone" />
+          <ScalarProperty Name="ParentObjectID" ColumnName="ParentObjectID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Region">
+      <EntityTypeMapping TypeName="IsTypeOf(JOMSQLDBModel.Region)">
+        <MappingFragment StoreEntitySet="Region">
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="ArName" ColumnName="ArName" />
+          <ScalarProperty Name="EnName" ColumnName="EnName" />
+          <ScalarProperty Name="PolyData" ColumnName="PolyData" />
+          <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+          <ScalarProperty Name="ZoomFactor" ColumnName="ZoomFactor" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FillColorR" ColumnName="FillColorR" />
+          <ScalarProperty Name="FillColorG" ColumnName="FillColorG" />
+          <ScalarProperty Name="FillColorB" ColumnName="FillColorB" />
+          <ScalarProperty Name="TranslateX" ColumnName="TranslateX" />
+          <ScalarProperty Name="TranslateY" ColumnName="TranslateY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sections">
+      <EntityTypeMapping TypeName="IsTypeOf(JOMSQLDBModel.Sections)">
+        <MappingFragment StoreEntitySet="Sections">
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+          <ScalarProperty Name="ArName" ColumnName="ArName" />
+          <ScalarProperty Name="EnName" ColumnName="EnName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Zone">
+      <EntityTypeMapping TypeName="IsTypeOf(JOMSQLDBModel.Zone)">
+        <MappingFragment StoreEntitySet="Zone">
+          <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+          <ScalarProperty Name="ArName" ColumnName="ArName" />
+          <ScalarProperty Name="EnName" ColumnName="EnName" />
+          <ScalarProperty Name="PolyData" ColumnName="PolyData" />
+          <ScalarProperty Name="ZoomFactor" ColumnName="ZoomFactor" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TranslateX" ColumnName="TranslateX" />
+          <ScalarProperty Name="TranslateY" ColumnName="TranslateY" />
+          <ScalarProperty Name="FillColorR" ColumnName="FillColorR" />
+          <ScalarProperty Name="FillColorG" ColumnName="FillColorG" />
+          <ScalarProperty Name="FillColorB" ColumnName="FillColorB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="CatParent" TypeName="JOMSQLDBModel.CatParent" StoreEntitySet="Category">
+      <EndProperty Name="Category">
+        <ScalarProperty Name="CategoryID" ColumnName="ParentID" />
+      </EndProperty>
+      <EndProperty Name="Category1">
+        <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+      </EndProperty>
+      <Condition ColumnName="ParentID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CatSection" TypeName="JOMSQLDBModel.CatSection" StoreEntitySet="Category">
+      <EndProperty Name="Sections">
+        <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+      </EndProperty>
+      <EndProperty Name="Category">
+        <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="RecordCat" TypeName="JOMSQLDBModel.RecordCat" StoreEntitySet="DataRecord">
+      <EndProperty Name="Category">
+        <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+      </EndProperty>
+      <EndProperty Name="DataRecord">
+        <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ZoneRegion" TypeName="JOMSQLDBModel.ZoneRegion" StoreEntitySet="Region">
+      <EndProperty Name="Zone">
+        <ScalarProperty Name="ID" ColumnName="ZoneID" />
+      </EndProperty>
+      <EndProperty Name="Region">
+        <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

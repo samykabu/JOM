@@ -1,0 +1,24 @@
+﻿<Window x:Class="MapMenu.DesignMain"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="clr-namespace:Controls;assembly=ImageButton"    
+    xmlns:WpfZommPanCanvas="clr-namespace:WpfZommPanCanvas;assembly=WpfZommPanCanvas"
+    xmlns:InterActiveMap="clr-namespace:InterActiveMap;assembly=InterActiveMap"
+        xmlns:L="clr-namespace:LocalizedImage;assembly=LocalizedImage"
+    Title="ConstructionDetails" Height="720" Width="1280" WindowState="Normal" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Topmost="False" >
+    <Canvas Width="1280" Height="720">
+        <Image Margin="0,83,0,104" Source="Properties\timeline-top-middelarea.png" Stretch="Fill" Height="620.133" Canvas.Top="16.867" Canvas.Left="0" Width="1280" />
+        <L:LocImage Margin="0,0,0,0" VerticalAlignment="Top"  AraImage="Images\timeline-top-Design.png" IsEnglish="{Binding Path=lng.isEnglish,Source= {x:Static Application.Current}}" Width="1280" Height="107"/>
+        
+        <c:AnimatedWrapPanel Margin="81,91,239,0" Height="450" VerticalAlignment="Top" Grid.Column="1" Canvas.Left="677" Width="496" Canvas.Top="31" Name="wPanel">
+                    
+        </c:AnimatedWrapPanel>
+        <WpfZommPanCanvas:ZPCanvas FullCanvasSize="3422,5388" Name="InterActiveMap" Height="465.0" Canvas.Left="30" Canvas.Top="107" Width="668.0" ClipToBounds="True" Focusable="False" IsHitTestVisible="False">
+            <InterActiveMap:MapViewer Focusable="False"  Panel.ZIndex="8" Name="MapViewer1" ></InterActiveMap:MapViewer>
+        </WpfZommPanCanvas:ZPCanvas>
+        <Label Canvas.Left="608" Canvas.Top="56" Height="42" Name="ZoneNameLBL" Width="659" FontSize="26" FontFamily="khalaad al-arabeh" Foreground="White" HorizontalContentAlignment="Center" FlowDirection="RightToLeft"></Label>
+        <c:ImageButton OriginalImage="/BTImages/HomeBtn.png" MouseOverImage="/BTImages/HomeBtn-Hilit.png" Width="29.997" Height="30" Canvas.Left="1199.88" Canvas.Top="12" MouseUp="CloseThisWindow" />
+        <c:ImageButton OriginalImage="/BTImages/Turn-offBtn-on.png" MouseOverImage="/BTImages/Turn-offBtn-Hilit.png" Width="30" HorizontalAlignment="Left" Canvas.Left="1238" Height="30" Canvas.Top="12" MouseUp="ExitApplication"/>
+        <Image Margin="0,100,-244,124" Source="Properties\timeline-zonesmapMask.png" Stretch="Fill" Canvas.Left="15.719" Width="700" Focusable="False" IsHitTestVisible="False"  IsEnabled="False" Height="488" Canvas.Top="-0.133" />
+    </Canvas>
+</Window>

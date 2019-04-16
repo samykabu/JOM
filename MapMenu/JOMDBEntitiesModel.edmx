@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="JOMSQLDBModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.3.5" ProviderManifestToken="3.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="JOMSQLDBModelStoreContainer">
+          <EntitySet Name="Category" EntityType="JOMSQLDBModel.Store.Category" store:Type="Tables" />
+          <EntitySet Name="DataRecord" EntityType="JOMSQLDBModel.Store.DataRecord" store:Type="Tables" />
+          <EntitySet Name="Region" EntityType="JOMSQLDBModel.Store.Region" store:Type="Tables" />
+          <EntitySet Name="Sections" EntityType="JOMSQLDBModel.Store.Sections" store:Type="Tables" />
+          <EntitySet Name="Zone" EntityType="JOMSQLDBModel.Store.Zone" store:Type="Tables" />
+          <AssociationSet Name="CatParent" Association="JOMSQLDBModel.Store.CatParent">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Category1" EntitySet="Category" />
+          </AssociationSet>
+          <AssociationSet Name="CatSection" Association="JOMSQLDBModel.Store.CatSection">
+            <End Role="Sections" EntitySet="Sections" />
+            <End Role="Category" EntitySet="Category" />
+          </AssociationSet>
+          <AssociationSet Name="RecordCat" Association="JOMSQLDBModel.Store.RecordCat">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="DataRecord" EntitySet="DataRecord" />
+          </AssociationSet>
+          <AssociationSet Name="ZoneRegion" Association="JOMSQLDBModel.Store.ZoneRegion">
+            <End Role="Zone" EntitySet="Zone" />
+            <End Role="Region" EntitySet="Region" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ArName" Type="nvarchar" MaxLength="300" />
+          <Property Name="EnName" Type="nvarchar" MaxLength="300" />
+          <Property Name="ParentID" Type="uniqueidentifier" />
+          <Property Name="SectionID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="DType" Type="int" Nullable="false" />
+          <Property Name="HeaderImageFile" Type="nvarchar" MaxLength="350" />
+        </EntityType>
+        <EntityType Name="DataRecord">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Caption" Type="nvarchar" MaxLength="300" />
+          <Property Name="Title" Type="nvarchar" MaxLength="300" />
+          <Property Name="ThumbnailFile" Type="nvarchar" MaxLength="400" />
+          <Property Name="DataFile" Type="nvarchar" Nullable="false" MaxLength="400" />
+          <Property Name="DataEntryDate" Type="datetime" Nullable="false" />
+          <Property Name="RecordDataType" Type="int" Nullable="false" />
+          <Property Name="BelongToZone" Type="bit" Nullable="false" />
+          <Property Name="ParentObjectID" Type="uniqueidentifier" />
+          <Property Name="CategoryID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EntryDateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Region">
+          <Key>
+            <PropertyRef Name="ZoneID" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="RegionID" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="ArName" Type="nvarchar" MaxLength="300" />
+          <Property Name="EnName" Type="nvarchar" MaxLength="300" />
+          <Property Name="PolyData" Type="ntext" Nullable="false" />
+          <Property Name="ZoneID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ZoomFactor" Type="float" />
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FillColorR" Type="int" />
+          <Property Name="FillColorG" Type="int" />
+          <Property Name="FillColorB" Type="int" />
+          <Property Name="TranslateX" Type="float" />
+          <Property Name="TranslateY" Type="float" />
+        </EntityType>
+        <EntityType Name="Sections">
+          <Key>
+            <PropertyRef Name="SectionID" />
+          </Key>
+          <Property Name="SectionID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ArName" Type="nvarchar" MaxLength="300" />
+          <Property Name="EnName" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="Zone">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ZoneID" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="ArName" Type="nvarchar" MaxLength="300" />
+          <Property Name="EnName" Type="nvarchar" MaxLength="300" />
+          <Property Name="PolyData" Type="ntext" />
+          <Property Name="ZoomFactor" Type="float" />
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TranslateX" Type="float" />
+          <Property Name="TranslateY" Type="float" />
+          <Property Name="FillColorR" Type="int" />
+          <Property Name="FillColorG" Type="int" />
+          <Property Name="FillColorB" Type="int" />
+        </EntityType>
+        <Association Name="CatParent">
+          <End Role="Category" Type="JOMSQLDBModel.Store.Category" Multiplicity="0..1" />
+          <End Role="Category1" Type="JOMSQLDBModel.Store.Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="Category1">
+              <PropertyRef Name="ParentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CatSection">
+          <End Role="Sections" Type="JOMSQLDBModel.Store.Sections" Multiplicity="1" />
+          <End Role="Category" Type="JOMSQLDBModel.Store.Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sections">
+              <PropertyRef Name="SectionID" />
+            </Principal>
+            <Dependent Role="Category">
+              <PropertyRef Name="SectionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RecordCat">
+          <End Role="Category" Type="JOMSQLDBModel.Store.Category" Multiplicity="1" />
+          <End Role="DataRecord" Type="JOMSQLDBModel.Store.DataRecord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="DataRecord">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ZoneRegion">
+          <End Role="Zone" Type="JOMSQLDBModel.Store.Zone" Multiplicity="1" />
+          <End Role="Region" Type="JOMSQLDBModel.Store.Region" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zone">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Region">
+              <PropertyRef Name="ZoneID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="JOMSQLDBModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="JOMSQLDBEntities">
+          <EntitySet Name="Category" EntityType="JOMSQLDBModel.Category" />
+          <EntitySet Name="DataRecord" EntityType="JOMSQLDBModel.DataRecord" />
+          <EntitySet Name="Region" EntityType="JOMSQLDBModel.Region" />
+          <EntitySet Name="Sections" EntityType="JOMSQLDBModel.Sections" />
+          <EntitySet Name="Zone" EntityType="JOMSQLDBModel.Zone" />
+          <AssociationSet Name="CatParent" Association="JOMSQLDBModel.CatParent">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Category1" EntitySet="Category" />
+          </AssociationSet>
+          <AssociationSet Name="CatSection" Association="JOMSQLDBModel.CatSection">
+            <End Role="Sections" EntitySet="Sections" />
+            <End Role="Category" EntitySet="Category" />
+          </AssociationSet>
+          <AssociationSet Name="RecordCat" Association="JOMSQLDBModel.RecordCat">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="DataRecord" EntitySet="DataRecord" />
+          </AssociationSet>
+          <AssociationSet Name="ZoneRegion" Association="JOMSQLDBModel.ZoneRegion">
+            <End Role="Zone" EntitySet="Zone" />
+            <End Role="Region" EntitySet="Region" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="Guid" Nullable="false" />
+          <Property Name="ArName" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+          <Property Name="EnName" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+          <Property Name="DType" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ChildCategories" Relationship="JOMSQLDBModel.CatParent" FromRole="Category" ToRole="Category1" />
+          <NavigationProperty Name="ParentCategory" Relationship="JOMSQLDBModel.CatParent" FromRole="Category1" ToRole="Category" />
+          <NavigationProperty Name="Sections" Relationship="JOMSQLDBModel.CatSection" FromRole="Category" ToRole="Sections" />
+          <NavigationProperty Name="DataRecords" Relationship="JOMSQLDBModel.RecordCat" FromRole="Category" ToRole="DataRecord" />
+          <Property Name="HeaderImageFile" Type="String" Nullable="true" /></EntityType>
+        <EntityType Name="DataRecord">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="Guid" Nullable="false" />
+          <Property Name="Caption" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+          <Property Name="Title" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+          <Property Name="ThumbnailFile" Type="String" MaxLength="400" Unicode="true" FixedLength="false" />
+          <Property Name="DataFile" Type="String" Nullable="false" MaxLength="400" Unicode="true" FixedLength="false" />
+          <Property Name="DataEntryDate" Type="DateTime" Nullable="false" />
+          <Property Name="RecordDataType" Type="Int32" Nullable="false" />
+          <Property Name="BelongToZone" Type="Boolean" Nullable="false" />
+          <Property Name="ParentObjectID" Type="Guid" />
+          <NavigationProperty Name="Category" Relationship="JOMSQLDBModel.RecordCat" FromRole="DataRecord" ToRole="Category" />
+          <Property Name="EntryDateTime" Type="DateTime" Nullable="false" /></EntityType>
+        <EntityType Name="Region">
+          <Key>
+            <PropertyRef Name="ZoneID" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="RegionID" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="ArName" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+          <Property Name="EnName" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+          <Property Name="PolyData" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ZoneID" Type="Guid" Nullable="false" />
+          <Property Name="ZoomFactor" Type="Double" />
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="FillColorR" Type="Int32" />
+          <Property Name="FillColorG" Type="Int32" />
+          <Property Name="FillColorB" Type="Int32" />
+          <Property Name="TranslateX" Type="Double" />
+          <Property Name="TranslateY" Type="Double" />
+          <NavigationProperty Name="Zone" Relationship="JOMSQLDBModel.ZoneRegion" FromRole="Region" ToRole="Zone" />
+        </EntityType>
+        <EntityType Name="Sections">
+          <Key>
+            <PropertyRef Name="SectionID" />
+          </Key>
+          <Property Name="SectionID" Type="Guid" Nullable="false" />
+          <Property Name="ArName" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+          <Property Name="EnName" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Category" Relationship="JOMSQLDBModel.CatSection" FromRole="Sections" ToRole="Category" />
+        </EntityType>
+        <EntityType Name="Zone">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ZoneID" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="ArName" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+          <Property Name="EnName" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+          <Property Name="PolyData" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ZoomFactor" Type="Double" />
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="TranslateX" Type="Double" />
+          <Property Name="TranslateY" Type="Double" />
+          <Property Name="FillColorR" Type="Int32" />
+          <Property Name="FillColorG" Type="Int32" />
+          <Property Name="FillColorB" Type="Int32" />
+          <NavigationProperty Name="Region" Relationship="JOMSQLDBModel.ZoneRegion" FromRole="Zone" ToRole="Region" />
+        </EntityType>
+        <Association Name="CatParent">
+          <End Role="Category" Type="JOMSQLDBModel.Category" Multiplicity="0..1" />
+          <End Role="Category1" Type="JOMSQLDBModel.Category" Multiplicity="*" />
+        </Association>
+        <Association Name="CatSection">
+          <End Role="Sections" Type="JOMSQLDBModel.Sections" Multiplicity="1" />
+          <End Role="Category" Type="JOMSQLDBModel.Category" Multiplicity="*" />
+        </Association>
+        <Association Name="RecordCat">
+          <End Role="Category" Type="JOMSQLDBModel.Category" Multiplicity="1" />
+          <End Role="DataRecord" Type="JOMSQLDBModel.DataRecord" Multiplicity="*" />
+        </Association>
+        <Association Name="ZoneRegion">
+          <End Role="Zone" Type="JOMSQLDBModel.Zone" Multiplicity="1" />
+          <End Role="Region" Type="JOMSQLDBModel.Region" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zone">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Region">
+              <PropertyRef Name="ZoneID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="JOMSQLDBModelStoreContainer" CdmEntityContainer="JOMSQLDBEntities">
+          <EntitySetMapping Name="Category">
+            <EntityTypeMapping TypeName="IsTypeOf(JOMSQLDBModel.Category)">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="HeaderImageFile" ColumnName="HeaderImageFile" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="ArName" ColumnName="ArName" />
+                <ScalarProperty Name="EnName" ColumnName="EnName" />
+                <ScalarProperty Name="DType" ColumnName="DType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DataRecord">
+            <EntityTypeMapping TypeName="IsTypeOf(JOMSQLDBModel.DataRecord)">
+              <MappingFragment StoreEntitySet="DataRecord">
+                <ScalarProperty Name="EntryDateTime" ColumnName="EntryDateTime" />
+                <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+                <ScalarProperty Name="Caption" ColumnName="Caption" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ThumbnailFile" ColumnName="ThumbnailFile" />
+                <ScalarProperty Name="DataFile" ColumnName="DataFile" />
+                <ScalarProperty Name="DataEntryDate" ColumnName="DataEntryDate" />
+                <ScalarProperty Name="RecordDataType" ColumnName="RecordDataType" />
+                <ScalarProperty Name="BelongToZone" ColumnName="BelongToZone" />
+                <ScalarProperty Name="ParentObjectID" ColumnName="ParentObjectID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Region">
+            <EntityTypeMapping TypeName="IsTypeOf(JOMSQLDBModel.Region)">
+              <MappingFragment StoreEntitySet="Region">
+                <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+                <ScalarProperty Name="ArName" ColumnName="ArName" />
+                <ScalarProperty Name="EnName" ColumnName="EnName" />
+                <ScalarProperty Name="PolyData" ColumnName="PolyData" />
+                <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+                <ScalarProperty Name="ZoomFactor" ColumnName="ZoomFactor" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FillColorR" ColumnName="FillColorR" />
+                <ScalarProperty Name="FillColorG" ColumnName="FillColorG" />
+                <ScalarProperty Name="FillColorB" ColumnName="FillColorB" />
+                <ScalarProperty Name="TranslateX" ColumnName="TranslateX" />
+                <ScalarProperty Name="TranslateY" ColumnName="TranslateY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sections">
+            <EntityTypeMapping TypeName="IsTypeOf(JOMSQLDBModel.Sections)">
+              <MappingFragment StoreEntitySet="Sections">
+                <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+                <ScalarProperty Name="ArName" ColumnName="ArName" />
+                <ScalarProperty Name="EnName" ColumnName="EnName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Zone">
+            <EntityTypeMapping TypeName="IsTypeOf(JOMSQLDBModel.Zone)">
+              <MappingFragment StoreEntitySet="Zone">
+                <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+                <ScalarProperty Name="ArName" ColumnName="ArName" />
+                <ScalarProperty Name="EnName" ColumnName="EnName" />
+                <ScalarProperty Name="PolyData" ColumnName="PolyData" />
+                <ScalarProperty Name="ZoomFactor" ColumnName="ZoomFactor" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TranslateX" ColumnName="TranslateX" />
+                <ScalarProperty Name="TranslateY" ColumnName="TranslateY" />
+                <ScalarProperty Name="FillColorR" ColumnName="FillColorR" />
+                <ScalarProperty Name="FillColorG" ColumnName="FillColorG" />
+                <ScalarProperty Name="FillColorB" ColumnName="FillColorB" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="CatParent" TypeName="JOMSQLDBModel.CatParent" StoreEntitySet="Category">
+            <EndProperty Name="Category">
+              <ScalarProperty Name="CategoryID" ColumnName="ParentID" />
+            </EndProperty>
+            <EndProperty Name="Category1">
+              <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+            </EndProperty>
+            <Condition ColumnName="ParentID" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="CatSection" TypeName="JOMSQLDBModel.CatSection" StoreEntitySet="Category">
+            <EndProperty Name="Sections">
+              <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+            </EndProperty>
+            <EndProperty Name="Category">
+              <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="RecordCat" TypeName="JOMSQLDBModel.RecordCat" StoreEntitySet="DataRecord">
+            <EndProperty Name="Category">
+              <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+            </EndProperty>
+            <EndProperty Name="DataRecord">
+              <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="ZoneRegion" TypeName="JOMSQLDBModel.ZoneRegion" StoreEntitySet="Region">
+            <EndProperty Name="Zone">
+              <ScalarProperty Name="ID" ColumnName="ZoneID" />
+            </EndProperty>
+            <EndProperty Name="Region">
+              <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+              <ScalarProperty Name="ID" ColumnName="ID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="JOMDBEntitiesModel">
+        <EntityTypeShape EntityType="JOMSQLDBModel.Category" Width="1.5" PointX="3" PointY="1.125" Height="2.5571907552083326" IsExpanded="true" />
+        <EntityTypeShape EntityType="JOMSQLDBModel.DataRecord" Width="1.5" PointX="5.25" PointY="1" Height="2.9417936197916665" IsExpanded="true" />
+        <EntityTypeShape EntityType="JOMSQLDBModel.Region" Width="1.5" PointX="3" PointY="5" Height="3.5186979166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="JOMSQLDBModel.Sections" Width="1.5" PointX="0.75" PointY="1.5" Height="1.7879850260416668" IsExpanded="true" />
+        <EntityTypeShape EntityType="JOMSQLDBModel.Zone" Width="1.5" PointX="0.75" PointY="5.125" Height="3.3263964843749996" IsExpanded="true" />
+        <AssociationConnector Association="JOMSQLDBModel.CatParent" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.5319230769230767" PointY="3.6821907552083326" />
+          <ConnectorPoint PointX="3.5319230769230767" PointY="3.9321907552083326" />
+          <ConnectorPoint PointX="3.9784615384615383" PointY="3.9321907552083326" />
+          <ConnectorPoint PointX="3.9784615384615383" PointY="3.6821907552083326" /></AssociationConnector>
+        <AssociationConnector Association="JOMSQLDBModel.CatSection" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.3939925130208333" />
+          <ConnectorPoint PointX="3" PointY="2.3939925130208333" /></AssociationConnector>
+        <AssociationConnector Association="JOMSQLDBModel.RecordCat" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="2.4035953776041663" />
+          <ConnectorPoint PointX="5.25" PointY="2.4035953776041663" /></AssociationConnector>
+        <AssociationConnector Association="JOMSQLDBModel.ZoneRegion" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="6.7881982421875" />
+          <ConnectorPoint PointX="3" PointY="6.7881982421875" /></AssociationConnector></Diagram></edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

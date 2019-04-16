@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="YearSelector.YearSelector"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="82" Width="1280" >
+    <Grid>
+        <Canvas Name="ControlContainer" Margin="0,0,247.5,0">
+            <Image  Name="Backgroundimg" Stretch="UniformToFill"   Canvas.Left="0" Canvas.Top="0" Source="/YearSelector;component/Properties/timeline-bottom.png" Width="1280" Height="82"/>
+            <Image Name="image1" Stretch="None" Source="/YearSelector;component/Properties/timeline-slider.png" MouseDown="MouseDownEv" MouseUp="MouseUpEv" MouseMove="MoveSlider" Opacity=".8" Width="1319" Height="56" Canvas.Left="-1255.0" Canvas.Top="-3" />
+            <Label Canvas.Left="1088" Canvas.Top="5" Height="47" Name="label1" Width="141" FontSize="22" FontWeight="Bold" FontFamily="simplified Arabic" ></Label>
+        </Canvas>
+    </Grid>
+</UserControl>

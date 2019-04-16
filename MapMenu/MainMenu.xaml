@@ -1,0 +1,27 @@
+﻿<Window x:Class="MapMenu.MainMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Controls="clr-namespace:LocalizedImageButton;assembly=LocalizedImageButton"
+    Title="MainMenu" Height="720" Width="1280" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Topmost="False" ShowInTaskbar="False">
+   
+    <Grid x:Name="LayoutRoot" Width="1280" Height="720" Background="{x:Null}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.747*"/>
+            <ColumnDefinition Width="0.253*"/>
+        </Grid.ColumnDefinitions>
+        <Image Margin="0,0,0,0" Grid.ColumnSpan="2" Source="Images/main-menu-bg.png" Stretch="None"/>        
+        <Controls:ImageButton  AraImage="/Images/MainConstructionsBtn.png" AraMouseOverImage="/Images/MainConstructionsBtn-Hilit.png"  EnImage="/Images/MainConstructionsBtnEN.png" EnMouseOverImage="/Images/MainConstructionsBtn-HilitEN.png" Grid.ColumnSpan="2" MouseUp="GotoConstruction" Height="92" Margin="-12,197.202,12,0" VerticalAlignment="Top" isEnglish="{Binding Path=lng.isEnglish,Source= {x:Static Application.Current}}" />
+        <Controls:ImageButton AraImage="/Images/Main3dPrespectiveBtn.png" AraMouseOverImage="/Images/Main3dPrespectiveBtn-Hilit.png" EnImage="/Images/Main3dPrespectiveBtnEN.png" EnMouseOverImage="/Images/Main3dPrespectiveBtn-HilitEN.png" Grid.ColumnSpan="2" MouseUp="GotoPresp" Margin="-12,288.658,12,340.102" isEnglish="{Binding Path=lng.isEnglish,Source= {x:Static Application.Current}}"/>
+        <Controls:ImageButton AraImage="/Images/MainDesignBtn.png" AraMouseOverImage="/Images/MainDesignBtn-Hilit.png" EnImage="/Images/MainDesignBtnEN.png" EnMouseOverImage="/Images/MainDesignBtn-HilitEN.png" Grid.ColumnSpan="2" MouseUp="GotoDesign" Margin="-12,105.746,12,0" Height="92.669" VerticalAlignment="Top" isEnglish="{Binding Path=lng.isEnglish,Source= {x:Static Application.Current}}"/>
+        <Controls:ImageButton  Height="92" AraImage="/Images/MainMasterPlanBtn.png" AraMouseOverImage="/Images/MainMasterPlanBtn-Hilit.png" EnImage="/Images/MainMasterPlanBtnEN.png" EnMouseOverImage="/Images/MainMasterPlanBtn-HilitEN.png" MouseUp="GotoGeneralLocation" Grid.ColumnSpan="2" VerticalAlignment="Bottom"  Margin="-12,0,12,247.217" isEnglish="{Binding Path=lng.isEnglish,Source= {x:Static Application.Current}}"/>
+        <Controls:ImageButton  Height="92" AraImage="/Images/MainPreStudiesBtn.png" AraMouseOverImage="/Images/MainPreStudiesBtn-Hilit.png" EnImage="/Images/MainPreStudiesBtnEN.png" EnMouseOverImage="/Images/MainPreStudiesBtn-HilitEN.png" MouseUp="GotoPreStudies"  Grid.ColumnSpan="2" VerticalAlignment="Bottom"  Margin="-12,0,12,155.761" isEnglish="{Binding Path=lng.isEnglish,Source= {x:Static Application.Current}}"/>
+        <Controls:ImageButton  Height="92" AraImage="/Images/MainMonthlyRepBtn.png" AraMouseOverImage="/Images/MainMonthlyRepBtn-Hilit.png" EnImage="/Images/MainMonthlyRepBtnEN.png" EnMouseOverImage="/Images/MainMonthlyRepBtn-HilitEN.png" Grid.ColumnSpan="2" VerticalAlignment="Bottom" MouseUp="GotoReports" Margin="-12,0,12,62.876" isEnglish="{Binding Path=lng.isEnglish,Source= {x:Static Application.Current}}"/>
+        <Image Source="/Images/main-menu-BG-footer.png" Height="122" Grid.ColumnSpan="2" Margin="-12,598,12,0" VerticalAlignment="Top" Focusable="False" IsHitTestVisible="False" />
+        <Controls:ImageButton AraImage="/BTImages/Turn-offBtn-on.png" AraMouseOverImage="/BTImages/Turn-offBtn-Hilit.png" EnImage="/BTImages/Turn-offBtn-on.png" EnMouseOverImage="/BTImages/Turn-offBtn-Hilit.png" Width="30" HorizontalAlignment="Left" Canvas.Left="1238" Height="30" Canvas.Top="12" MouseUp="ExitApplication" Margin="15,0,0,45" VerticalAlignment="Bottom" />
+        <Controls:ImageButton Name="LangBT" EnImage="/Images/ArabicBtn.png" EnMouseOverImage="/Images/ArabicBtn-Hilit.png"  AraImage="/Images/EnglishBtn.png" AraMouseOverImage="/Images/EnglishBtn-Hilit.png" Width="30" Height="30" Canvas.Left="1164" Canvas.Top="12" MouseUp="ChangeLanguage" isEnglish="{Binding Path=lng.isEnglish,Source= {x:Static Application.Current}}" HorizontalAlignment="Left" Margin="51,0,0,45" VerticalAlignment="Bottom" />
+
+        <Canvas Background="Black" Width="1280" Height="720" Visibility="Collapsed" Name="HideAllCanvas">
+            <Image Source="Images\Loading2.gif" Width="1280" Height="720"></Image>
+        </Canvas>
+    </Grid>
+</Window>
